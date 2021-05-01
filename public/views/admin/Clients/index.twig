@@ -1,0 +1,42 @@
+{% extends layout %}
+  {% import 'components/button.twig' as button %}
+  {% import 'components/headline.twig' as headline %}
+{% block content %}
+<div class="box">
+  {{ headline.title({
+    text: 'Lista klientów',
+    subtext: 'Eluwina'
+  }) }}
+  <table class="table">
+    <thead>
+      <tr>
+        <td>Name</td>
+        <td>city</td>
+        <td>street</td>
+        <td>phone</td>
+        <td>email</td>
+        <td class="position-sticky">
+          {{ button.render({url:'/clients/add', ico: 'fa-plus', el: 'modal', class: 'btn-success'}) }}
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in users %}
+        <tr>
+          <td>{{ user.name }}</td>
+          <td>{{ user.www }}</td>
+          <td>{{ user.ftp_server }}</td>
+          <td>{{ user.ftp_user }}</td>
+          <td>{{ user.db_user }}</td>
+          <td class="position-sticky">
+            {{ button.link({url:'/test/'~user.mail, text: 'edytuj', class: 'btn-warning'}) }}
+            &nbsp;
+            {{ button.link({url:'/clients/details/'~user.id, text: 'pokaż', class: 'btn-outline-secondary'}) }}
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}

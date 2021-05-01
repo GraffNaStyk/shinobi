@@ -1,0 +1,9 @@
+.idea/*
+storage/framework/*
+storage/private/*
+storage/public/*
+storage/cache/*
+vendor/*
+composer.lock
+app/config/.env
+app/config/app.php

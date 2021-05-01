@@ -1,0 +1,11 @@
+<?php
+
+namespace App\Cron;
+
+class CLASSNAME
+{
+    public function __construct()
+    {
+
+    }
+}

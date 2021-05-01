@@ -1,0 +1,58 @@
+{% extends layout %}
+  {% import 'components/button.twig' as button %}
+{% block content %}
+  <div class="mt-3 row">
+    <div class="col-md-6">
+      <p>Account number: {{ account.name }}</p>
+      <p>Email: {{ account.email }}</p>
+      <p>Characters: {{ players|length }}</p>
+      <p>Premium days: {{ account.premdays }}</p>
+      <p>Premium points: {{ account.premium_points }}</p>
+      {{ button.render({
+        el: 'modal',
+        url: '/player/change/email',
+        text: 'change email',
+        class: 'mt-3'
+      }) }}
+      &nbsp;
+      {{ button.render({
+        el: 'modal',
+        url: '/player/change/password',
+        text: 'change password',
+        class: 'mt-3'
+      }) }}
+    </div>
+    <div class="col-md-6">
+      <div class="d-flex justify-content-end"><a class="is_edit btn" style="background: var(--main-orange); color: var(--text-in-dark-color)" href="{{ url('/account/logout') }}"> Logout  </a></div>
+      <div class="d-flex flex-column mt-2">
+        <div class="d-flex justify-content-between mb-2">
+          <b>Name</b> <b>lvl &nbsp; #</b>
+        </div>
+        {% for player in players %}
+          <div class="d-flex justify-content-between py-2 align-items-center" style="border-bottom: 1px solid var(--main-orange);">
+            <div class="align-items-center d-flex">
+              <img src="{{ img(player.src) }}" alt="">
+              &nbsp; ({{ player.prof_name }}) &nbsp; {{ player.name }}
+            </div>
+            <div class="align-items-center d-flex">
+              {{ player.level }}
+              &nbsp;
+              <span class="confirm remove__character"
+                    data-title="Delete character"
+                    data-body="Are you sure to delete character {{ player.name }}?"
+                    data-action="/player/delete/{{ player.id }}">
+                ×
+              </span>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      {{ button.render({
+        el: 'modal',
+        url: 'player/add',
+        text: 'create character',
+        class: 'mt-3'
+      }) }}
+    </div>
+  </div>
+{% endblock %}

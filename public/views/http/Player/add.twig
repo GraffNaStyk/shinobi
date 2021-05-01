@@ -1,0 +1,40 @@
+{% import 'components/form.twig' as form %}
+{% block content %}
+  <form data-action="player/store">
+    <div class="modal-header">
+      <h5 class="modal-title">Create character</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="form__grid pb-3">
+        {{ form.input({
+          name: 'name',
+          label: 'nickname',
+          type: 'text'
+        }) }}
+        {{ form.select({
+          name: 'town_id',
+          data: towns,
+          label: 'select town'
+        }) }}
+        <div class="d-flex flex-wrap" style="display: grid!important; grid-template-columns: auto auto auto auto auto auto;">
+          {% for key,prof in professions %}
+            <div class="char__item my-1">
+              <label for="{{ key }}" class="justify-content-center align-items-center" style="cursor: pointer;">
+                <img src="{{ img(prof.src) }}" alt="">
+                <span>{{ prof.name|raw }}</span>
+                <input type="radio" value="{{ prof.id }}" name="vocation" id="{{ key }}">
+              </label>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    {{ form.csrf('Player@store') }}
+    <div class="modal-footer">
+      {{ form.submit({value: 'Create'}) }}
+    </div>
+  </form>
+{% endblock %}

@@ -1,0 +1,106 @@
+:root {
+  --main-black-color: #100c0c;
+  --black-border: #252525;
+  --grey-border: #e6e6ec;
+  --main-white: #fafafa;
+  --main-orange: #ec781c;
+  --text-in-dark-color: #fff;
+  --text-in-white-color: #333;
+}
+
+.bg__image {
+  background-size: cover;
+  background-position: 50% 1%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.logo {
+  width: 60px;
+}
+
+h1,h2,h3,h4,h5,h6,p,a,span,b {
+  font-family: 'Nunito', sans-serif;
+}
+
+.black-text {
+  color: var(--text-in-white-color);
+}
+
+.white-text {
+  color: var(--text-in-dark-color);
+}
+
+.navbar {
+  background: var(--main-black-color)!important;
+  padding: 0!important;
+}
+
+footer {
+  background: rgba(0,0,0,0.6);
+}
+
+.footer__title {
+  color: var(--text-in-dark-color)!important;
+}
+
+#main-page-wrapper {
+  background: rgba(255,255,255,0.98);
+  margin: 15px auto 15px auto;
+  border-radius: 8px;
+  border: 3px solid var(--grey-border)
+}
+
+.collapse {
+  justify-content: center;
+}
+
+.collapse .nav-link {
+  color: var(--text-in-dark-color);
+  border-left: 1px solid var(--grey-border);
+  transition: .6s;
+}
+
+.collapse .nav-link:last-child {
+  border-right: 1px solid var(--grey-border);
+}
+
+.collapse .nav-link:hover {
+  transition: .6s;
+  color: var(--main-orange);
+}
+
+.socials img {
+  width: 60px;
+}
+
+.account__action {
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: .7s;
+}
+
+.account__action:hover {
+  text-decoration: none;
+  color: var(--main-orange);
+  transition: .7s;
+}
+
+
+.remove__character {
+  color: red;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.table td {
+  border-top: 1px solid var(--main-orange)!important;
+}
+
+.table tbody + tbody {
+  border-top: 2px solid var(--main-orange)!important;
+}
+
+.table th {
+  border-top: none!important;
+}

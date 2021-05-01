@@ -1,0 +1,28 @@
+{% extends layout %}
+
+{% block content %}
+  <h3 class="mt-3">Highscores by level</h3>
+  <table class="table">
+    <tr>
+      <th style="width:15px;">#</th>
+      <th>Name</th>
+      <th>Level</th>
+      <th>Magic level</th>
+      <th style="text-align: right;">Experience</th>
+    </tr>
+    <tbody>
+      {% for key,player in players %}
+        <tr>
+          <td>{{ key+1 }}</td>
+          <td>
+            <img src="{{ img(player.src) }}" alt=""> &nbsp;  ({{ player.prof_name }}) &nbsp; <span>{{ player.name }}</span>
+          </td>
+          <td>{{ player.level }}</td>
+          <td>{{ player.maglevel }}</td>
+          <td style="text-align: right;">{{ player.experience }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}
