@@ -7,8 +7,8 @@ class LoginValidator
     public function getRule(array $optional = []): array
     {
         return [
-        	'name'     => 'required|int|minLength:6|maxLength:6',
-	        'password' => 'required|string|maxLength:6|maxLength:12'
+        	'name'     => 'required|int|min_len:6|max_len:6',
+	        'password' => 'required|string|min_len:6|max_len:12'
         ];
     }
 }

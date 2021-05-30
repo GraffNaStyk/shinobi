@@ -1,0 +1,33 @@
+{% extends layout %}
+{% import 'components/form.twig' as form %}
+{% import 'components/headline.twig' as headline %}
+{% block content %}
+  <form data-action="/news/store" method="post">
+    <div class="form__grid">
+      {{ form.input({
+        type: 'text',
+        name: 'title',
+        label: 'title',
+        value: ''
+      }) }}
+      {{ form.select({
+        name: 'created_by',
+        data: players,
+        label: 'select player'
+      }) }}
+    </div>
+    {{ form.textarea({
+      name: 'text',
+      label: 'Text',
+      value: '',
+      rows: 15,
+      cols: 200,
+      class: 'mt-4'
+    }) }}
+    {{ form.csrf('News@store') }}
+    {{ form.submit({
+      value: 'Create',
+      class: 'mt-2 btn-success'
+    }) }}
+  </form>
+{% endblock %}

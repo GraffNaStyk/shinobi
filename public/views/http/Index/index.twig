@@ -1,5 +1,18 @@
 {% extends layout %}
 
 {% block content %}
-
+  <h2 class="text-center mt-3">News list</h2>
+  {% for news in newses %}
+    <article>
+      <h3 class="news__header">{{ news.title }}</h3>
+      <p style="line-height: 30px;" class="mt-2">
+        {{ news.text|raw }}
+      </p>
+      <div class="d-flex justify-content-between article__footer">
+        <p class="mb-1">Published by: &nbsp; <b>{{ news.name }}</b></p>
+        <p class="mb-1">Published at: &nbsp; <b>{{ news.created_at|date('Y-m-d H:i') }}</b> </p>
+      </div>
+    </article>
+    <hr class="mt-1 mb-3" style="border-top: 2px solid var(--main-orange)">
+  {% endfor %}
 {% endblock %}

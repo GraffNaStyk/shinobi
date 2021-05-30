@@ -19,6 +19,7 @@ class AccountController extends Controller
 	public function __construct()
 	{
 		parent::__construct();
+		$this->setTitle('Account');
 	}
 	
 	public function index()
@@ -44,7 +45,9 @@ class AccountController extends Controller
 		
 		if ($acc && $acc->password === sha1($request->get('password'))) {
 			Auth::login($acc);
-			$this->sendSuccess('Logged successfully', '/account/show');
+			$this->sendSuccess('Logged successfully', [
+				'to' => '/account/show'
+			]);
 		}
 		
 		$this->sendError('Wrong account or password');
@@ -69,14 +72,16 @@ class AccountController extends Controller
 				$errors[] = $item;
 			}
 			
-			$this->sendError(null, 400, [], $errors);
+			$this->sendError('Field name and nickname must be same');
 		}
 
 		try {
 			$request->set('password', sha1($request->get('password')));
 			Account::create($request->all());
 			Player::create($fields);
-			$this->sendSuccess('Account registered successful', '/account');
+			$this->sendSuccess('Account registered successful', [
+				'to' => '/account'
+			]);
 		} catch (\Exception $exception) {
 			$this->sendError('There was an error in your request, please try in a minute');
 		}

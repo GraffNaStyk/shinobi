@@ -20,6 +20,5 @@ class Migration_News_2021_04_30__22_29
 
 	public function down(Schema $schema)
 	{
-		$schema->clear();
 	}
 }

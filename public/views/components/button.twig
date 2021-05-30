@@ -1,5 +1,5 @@
 {% macro link(data) %}
-  <a class="btn {{ data.class }}" href="{{ url(data.url) }}">
+  <a class="btn {{ data.class }}" href="{{ url(data.url) }}" style="{{ data.style }}">
     {% if data.text %}
       {{ data.text }}
     {% endif %}
@@ -24,7 +24,11 @@
 
 {% macro action(data) %}
   {% if data.url %}
-    <button class="action {{ data.class }}" {{ data.attr }} data-csrf="{{ csrf(data.csrf) }}" data-url="{{ data.url }}" data-options="{{ options(data.options) }}">
+    <button class="action {{ data.class }}"
+            {{ data.attr }}
+            data-csrf="{{ csrf(data.csrf) }}"
+            data-url="{{ data.url }}"
+            data-options="{{ options(data.options) }}">
       {% if data.text %}
         {{ data.text|raw }}
       {% endif %}
@@ -34,3 +38,16 @@
     </button>
   {% endif %}
 {% endmacro action %}
+
+{% macro confirm(data) %}
+  {% if data.url %}
+    <span class="confirm {{ data.class }}"
+          data-title="{{ data.title }}"
+          data-body="{{ data.body }}"
+          data-url="{{ data.url }}"
+          data-options="{{ options(data.options) }}"
+          data-csrf="{{ csrf(data.csrf) }}">
+        {{ data.text }}
+  </span>
+  {% endif %}
+{% endmacro confirm %}

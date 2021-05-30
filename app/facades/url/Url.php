@@ -9,9 +9,9 @@ class Url
     public static function get(): string
     {
         if (Router::getAlias() === 'http') {
-            $url = Url::base();
+            $url = Url::base().$url;
         } else {
-            $url = Url::base().'/'.Router::getAlias();
+            $url = Url::base().'/'.Router::getAlias().$url;
         }
         
         return $url;

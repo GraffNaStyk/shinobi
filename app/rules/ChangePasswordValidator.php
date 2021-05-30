@@ -9,8 +9,8 @@ class ChangePasswordValidator
     public function getRule(array $optional = []): array
     {
         return [
-	        'new_password' => 'required|string|minLength:6|maxLength:12',
-	        'old_password' => 'required|string|minLength:6|maxLength:12|'.static::class.':isSamePassword',
+	        'new_password' => 'required|string|min_len:6|max_len:12',
+	        'old_password' => 'required|string|min_len:6|max_len:12|'.static::class.':isSamePassword',
         ];
     }
     

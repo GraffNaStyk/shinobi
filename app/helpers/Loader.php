@@ -26,10 +26,13 @@ class Loader
 		$folder = Router::getAlias();
 		
 		if (app('dev')) {
-			$cssArr = glob(css_path("$folder/*.css"), GLOB_BRACE);
+			$cssArr = [
+				...glob(css_path("$folder/*.css"), GLOB_BRACE),
+				...glob(css_path("components/*.css"), GLOB_BRACE)
+			];
 
 			$rebuild = false;
-			$mtime = filemtime(js_path('build/'.$folder.'/main.css'));
+			$mtime = filemtime(css_path($folder.'.css'));
 			
 			foreach ($cssArr as $item) {
 				if (filemtime($item) > $mtime) {
@@ -39,16 +42,16 @@ class Loader
 			}
 			
 			if ($rebuild) {
-				unlink(css_path('build/'.$folder.'/main.css'));
+				unlink(css_path($folder.'.css'));
 				$cssString = null;
 				
-				foreach ($cssArr as $key => $css) {
+				foreach ($cssArr as $css) {
 					if ((bool) is_readable($css)) {
 						$cssString .= preg_replace('/\s\s+/', '', file_get_contents($css));
 					}
 				}
 				
-				file_put_contents(css_path('build/'.$folder.'/main.css'), $cssString);
+				file_put_contents(css_path($folder.'.css'), $cssString);
 			}
 		}
 		
@@ -59,19 +62,17 @@ class Loader
 		}
 		
 		$applyCss .= trim('<link rel="stylesheet" href="'.
-				self::$url.str_replace(app_path(), '', css_path('build/'.$folder.'/main.css')).'">').PHP_EOL;
+				self::$url.str_replace(app_path(), '', css_path($folder.'.css')).'">').PHP_EOL;
 		
 		return $applyCss;
 	}
 	
 	public static function js(): string
 	{
-		$folder = Router::getAlias();
-		
 		if (app('dev')) {
-			$jsArr = glob(js_path("$folder/*.js"), GLOB_BRACE);
+			$jsArr = glob(js_path('components/*.js'), GLOB_BRACE);
 			$rebuild = false;
-			$mtime = filemtime(js_path('build/'.$folder.'/main.js'));
+			$mtime = filemtime(js_path('main.js'));
 			
 			foreach ($jsArr as $item) {
 				if (filemtime($item) > $mtime) {
@@ -81,17 +82,17 @@ class Loader
 			}
 
 			if ($rebuild) {
-				unlink(js_path('build/'.$folder.'/main.js'));
+				unlink(js_path('main.js'));
 				$jsString = null;
 
-				foreach ($jsArr as $key => $js) {
+				foreach ($jsArr as $js) {
 					if ((bool) is_readable($js)) {
 						$jsString .= preg_replace('/\s\s+/', ' ', file_get_contents($js)).' ; ';
 					}
 				}
 				
 				file_put_contents(
-					js_path('build/'.$folder.'/main.js'),
+					js_path('main.js'),
 					$jsString
 				);
 			}
@@ -104,7 +105,9 @@ class Loader
 		}
 		
 		$applyJs .= trim('<script type="module" src="'.
-				self::$url.str_replace(app_path(), '', js_path('build/'.$folder.'/main.js')).'"></script>').PHP_EOL;
+				self::$url.str_replace(app_path(), '', js_path('main.js')).'"></script>').PHP_EOL;
+
+		$applyJs .= self::getFile(Router::getAlias(), 'js');
 		
 		return $applyJs;
 	}
@@ -124,7 +127,7 @@ class Loader
 			return trim('<script src="'.
 				self::$url.str_replace(app_path(), '', $path).'"></script>'.PHP_EOL);
 		}
-		
+
 		return '';
 	}
 }

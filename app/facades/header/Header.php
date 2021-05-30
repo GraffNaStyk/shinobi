@@ -2,10 +2,17 @@
 
 namespace App\Facades\Header;
 
-use App\Facades\Http\Router\Route;
-
 class Header
 {
+	const RESPONSE_CODES = [
+		400 => 'Bad Request',
+		401 => 'Unauthorized',
+		403 => 'Forbidden',
+		404 => 'Not Found',
+		405 => 'Method Not Allowed',
+		500 => 'Internal Server Error'
+	];
+	
     public static function set(): void
     {
         header('Content-Type: text/html; charset=utf-8');
@@ -18,10 +25,7 @@ class Header
         if (app('security.enabled')) {
 	        header('Content-Security-Policy: '.app('security.protection'));
         }
-	
-	    header('Access-Control-Allow-Origin: '.Route::checkProtocol().'://'.getenv('HTTP_HOST'));
-	    header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
-	    header('Access-Control-Allow-Headers: X-Requested-With, Content-Type, Accept');
+        
         header('Strict-Transport-Security: max-age=31536000');
         header('X-Content-Type-Options: nosniff');
         header('X-XSS-Protection: 1; mode=block');

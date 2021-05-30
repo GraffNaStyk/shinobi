@@ -1,0 +1,59 @@
+{% extends layout %}
+
+{% block content %}
+  <h3 class="mt-3 text-center">Items</h3>
+  <div class="d-flex sort__items justify-content-between">
+    <a class="{{ active == 'distance' ? 'active' }}" href="{{ url('/items/distance') }}">Distance</a>
+    <a class="{{ active == 'boots' ? 'active' }}" href="{{ url('/items/boots') }}">Boots</a>
+    <a class="{{ active == 'helmets' ? 'active' }}" href="{{ url('/items/helmets') }}">Helmets</a>
+    <a class="{{ active == 'swords' ? 'active' }}" href="{{ url('/items/swords') }}">Swords</a>
+    <a class="{{ active == 'glovers' ? 'active' }}" href="{{ url('/items/glovers') }}">Glovers</a>
+    <a class="{{ active == 'armors' ? 'active' }}" href="{{ url('/items/armors') }}">Armors</a>
+    <a class="{{ active == 'legs' ? 'active' }}" href="{{ url('/items/legs') }}">Legs</a>
+  </div>
+  <div class="table-responsive">
+    <table class="table table-sort">
+     <thead>
+     <tr>
+       {% for key in keys %}
+         <th>{{ key }}</th>
+       {% endfor %}
+     </tr>
+     </thead>
+      <tbody>
+        {% for item in items %}
+          <tr>
+            <td>{{ item.id }}</td>
+            <td>
+              <img src="{{ img(item.img) }}" alt=""> &nbsp;  {{ item.name }}
+            </td>
+            <td>{{ item.cid }}</td>
+            <td>{{ item.defense }}</td>
+            <td>{{ item.armor }}</td>
+            <td>{{ item.attack }}</td>
+            <td>{{ item.range }}</td>
+            <td>{{ item.level }}</td>
+            <td>{{ item.attack_speed }}</td>
+            <td>{{ item.jutsu_damage }}</td>
+            <td>{{ item.extra_def }}</td>
+            <td>{{ item.protection_all }}</td>
+            <td>{{ item.critical_chance }}</td>
+            <td>{{ item.glove_fighting }}</td>
+            <td>{{ item.sword_fighting }}</td>
+            <td>{{ item.health }}</td>
+            <td>{{ item.chakra }}</td>
+            <td>{{ item.health_regen }}</td>
+            <td>{{ item.chakra_regen }}</td>
+            <td>{{ item.chakra_regen }}</td>
+            <td>{{ item.weight }}</td>
+            <td>{{ item.type }}</td>
+            <td>{{ item.description }}</td>
+            <td>
+              <img src="{{ img(item.img) }}" alt="">
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+  </div>
+{% endblock %}

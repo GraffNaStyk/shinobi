@@ -11,7 +11,7 @@ class CreateCharacterValidator
     public function getRule(array $optional = []): array
     {
         return [
-        	'name'     => 'required|string|minLength:4|maxLength:20|unique:'.Player::class.'|'.static::class.':checkName',
+        	'name'     => 'required|string|min_len:4|max_len:20|unique:'.Player::class.'|'.static::class.':checkName',
 	        'vocation' => 'required|int|'.static::class.':characterExist',
 	        'town_id'  => 'required|int|'.static::class.':townExist',
         ];

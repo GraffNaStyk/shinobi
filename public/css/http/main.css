@@ -74,6 +74,10 @@ footer {
   width: 60px;
 }
 
+.socials img:hover {
+  cursor: pointer;
+}
+
 .account__action {
   font-size: 1.1rem;
   text-decoration: none;
@@ -85,7 +89,6 @@ footer {
   color: var(--main-orange);
   transition: .7s;
 }
-
 
 .remove__character {
   color: red;
@@ -103,4 +106,65 @@ footer {
 
 .table th {
   border-top: none!important;
+}
+
+.news__header {
+  color: var(--main-orange);
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 575px) {
+  .navbar-toggler {
+    margin-right: 6px;
+    padding: .4rem .85rem;
+  }
+
+  #navbarNav {
+    position: absolute;
+    width: 100%;
+    background: var(--main-black-color);
+    top: 60px;
+    z-index: 15;
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  .collapse .nav-link:last-child {
+    border-right: none;
+  }
+
+  .collapse .nav-link {
+    border-left: none;
+  }
+
+  .article__footer {
+    flex-direction: column;
+  }
+
+  #main-page-wrapper {
+    margin: 0 auto 15px auto;
+  }
+}
+
+.sort__items a {
+  border: 2px solid var(--main-orange);
+  color: black;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: .8s;
+}
+
+.sort__items a:hover {
+  color: white;
+  background: var(--main-orange);
+  transition: .8s;
+}
+
+.sort__items a.active {
+  color: white;
+  background: var(--main-orange);
 }

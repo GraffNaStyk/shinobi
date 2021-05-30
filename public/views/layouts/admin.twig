@@ -23,11 +23,10 @@
     <a href="#" {{ tooltip('profile') }}><i data-menu="toggle" data-target="#menu" class="fa fa-user"></i></a>
 
     <div class="box__menu flex-column d-none" id="menu">
-      <div class="render" data-url="password" data-el="modal">Resetuj hasło</div>
-      <a href="{{ url('/profile') }}">Mój profil</a>
+
     </div>
 
-    <a href="{{ url('/logout') }}" {{ tooltip('logout') }}> <i class="fa fa-power-off"></i> </a>
+    <a href="{{ base('/account/logout') }}" {{ tooltip('logout') }}> <i class="fa fa-power-off"></i> </a>
 
   </div>
 </nav>
@@ -37,10 +36,10 @@
   <aside class="left-panel d-flex">
     <a href="{{ url() }}"> <i class="fa fa-home"></i> Główna</a>
 
-    <a href="#" class="has__parent"> <i class="fa fa-users"></i> Klienci</a>
+    <a href="#" class="has__parent"> <i class="fa fa-users"></i> Posty</a>
     <div class="parent">
-      <a class="render" data-el="modal" data-url="/clients/add" href="#">nowy</a>
-      <a href="{{ url('/clients') }}">Lista</a>
+      <a href="{{ url('/news/add') }}">nowy</a>
+      <a href="{{ url('/news') }}">Lista</a>
     </div>
 
   </aside>

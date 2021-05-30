@@ -36,13 +36,13 @@ class PlayerController extends Controller
 		$this->sendSuccess('Character created');
     }
 
-    public function delete(int $id)
+    public function delete(Request $request)
     {
 		Player::delete()
 			->where('account_id', '=', Auth::id())
-			->where('id', '=', $id)
+			->where('id', '=', $request->get('id'))
 			->exec();
 		
-		$this->redirect('/account/show');
+		$this->sendSuccess('Player delete');
     }
 }

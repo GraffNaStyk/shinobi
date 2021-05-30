@@ -18,16 +18,17 @@
 <nav class="navbar navbar-expand-lg">
 <div class="container p-0">
   <a href="{{ url() }}"> <img class="logo" src="{{ img('/storage/public/logo.png') }}" alt=""> </a>
-  <div class="collapse navbar-collapse">
+  <div class="collapse navbar-collapse" id="navbarNav">
     <a class="nav-link" href="{{ url() }}">News</a>
     <a class="nav-link" href="{{ url('/account') }}">Account</a>
     <a class="nav-link" href="{{ url('/highscores') }}">Highscores</a>
+    <a class="nav-link" href="{{ url('/items') }}">Items</a>
   </div>
   <div class="socials">
     <img src="{{ img('/storage/public/discord.png') }}" alt="">
   </div>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-    <span class="navbar-toggler-icon"></span>
+    <i class="fa fa-bars"></i>
   </button>
 </div>
 </nav>

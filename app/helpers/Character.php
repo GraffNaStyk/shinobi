@@ -45,9 +45,9 @@ class Character
     
     public static function prepareCharactersToView(array $characters): array
     {
-    	foreach ($characters as $key => $character) {
+    	foreach ($characters as $character) {
     		$name = static::$characters[$character->vocation];
-    		
+    		$character->experience = number_format($character->experience, 0, '.', '.');
     		$character->prof_name = $name;
     		$character->src       = '/storage/public/professions/'.mb_strtolower($name).'.png';
 	    }

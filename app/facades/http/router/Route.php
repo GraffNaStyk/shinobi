@@ -36,16 +36,29 @@ abstract class Route
         return self::match($url, $controller, 'post', $rights);
     }
     
-    public static function put(string $url, string $controller, int $rights = 4): Collection
+    public static function put(string $url, string $controller, int $rights=4): Collection
     {
 	    return self::match($url, $controller, 'put', $rights);
     }
     
-    public static function delete(string $url, string $controller, int $rights = 4): Collection
+    public static function group(array $urls, string $controller, string $method='post', int $rights=4): Collection
+    {
+    	$lastKey = array_key_last($urls);
+
+    	foreach ($urls as $key => $url) {
+    		if ($lastKey === $key) {
+    			return self::match($url, $controller, $method, $rights);
+		    }
+
+		    self::match($url, $controller, $method, $rights);
+	    }
+    }
+
+    public static function delete(string $url, string $controller, int $rights=4): Collection
     {
 	    return self::match($url, $controller, 'delete', $rights);
     }
-    
+
     public static function alias(string $alias, callable $function): void
     {
         self::$alias = $alias;
@@ -53,7 +66,7 @@ abstract class Route
         self::$alias = null;
     }
 	
-	public static function crud(string $url, string $controller, int $rights = 4)
+	public static function crud(string $url, string $controller, int $rights=4)
 	{
 		self::get($url, $controller.'@index', $rights);
 		self::get($url.'/add', $controller.'@add', $rights);
@@ -66,10 +79,9 @@ abstract class Route
     
     private static function match(string $as, string $route, string $method, int $rights): Collection
     {
-        $route = str_replace('@', '/', $route);
-        $routes = explode('/', $route);
-        
-        $collection = new Collection (
+        $routes = explode('@', $route);
+
+        $collection = new Collection(
 	        ucfirst($routes[0]),
 	        lcfirst($routes[1]) ?? 'index',
 	        self::$namespace,
@@ -77,11 +89,11 @@ abstract class Route
 	        $rights,
 	        self::$middleware
         );
-        
-	    self::$routes[self::$alias . $as ?? $route] = $collection;
-	    
+
+	    self::$routes[self::$alias . $as ?? $routes[0].'/'.$routes[1]] = $collection;
+
 	    if ($method !== 'get') {
-		    Csrf::make(ucfirst($collection->getController()).'@'.$collection->getAction());
+		    Csrf::make($route);
 	    }
 	    
 	    return $collection;
@@ -100,7 +112,7 @@ abstract class Route
         }
     }
     
-    public static function redirect(string $path, int $code = 302, bool $direct = false): void
+    public static function redirect(string $path, int $code=302, bool $direct=false): void
     {
         session_write_close();
         session_regenerate_id();

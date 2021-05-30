@@ -8,21 +8,20 @@ use App\Model\Player;
 
 class HighscoreController extends Controller
 {
-	private array $filterTypes = [
-		''
-	];
 	
     public function __construct()
     {
         parent::__construct();
-        $this->setTitle('highscores');
+        $this->setTitle('Highscores');
     }
 
     public function index()
     {
     	return $this->render([
     		'players' => Character::prepareCharactersToView(
-    			Player::select(['name', 'level', 'vocation', 'experience', 'maglevel'])->order(['level'], 'desc')->get()
+    			Player::select(['name', 'level', 'vocation', 'experience', 'maglevel'])
+				    ->order(['level'], 'desc')
+				    ->get()
 		    )
 	    ]);
     }

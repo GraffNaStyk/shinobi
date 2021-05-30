@@ -1,0 +1,46 @@
+{% extends layout %}
+  {% import 'components/button.twig' as button %}
+  {% import 'components/headline.twig' as headline %}
+{% block content %}
+<div class="box">
+  {{ headline.title({
+    text: 'Newsy',
+    subtext: 'newses'
+  }) }}
+  <table class="table">
+    <thead>
+      <tr>
+        <td>Id</td>
+        <td>Title</td>
+        <td>Creator</td>
+        <td>Created at</td>
+        <td class="position-sticky">
+          {{ button.link({url:'/news/add', ico: 'fa-plus', class: 'btn-success'}) }}
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      {% for news in newses %}
+        <tr>
+          <td>{{ news.id }}</td>
+          <td>{{ news.title }}</td>
+          <td>{{ news.name }}</td>
+          <td>{{ news.created_at }}</td>
+          <td class="position-sticky">
+            {{ button.action({
+              url:'/news/active',
+              text: news.is_active == 1 ? 'deactive' : 'active',
+              csrf: 'News@active',
+              options: {id: news.id, active: news.is_active},
+              class: 'btn-outline-secondary'
+            }) }}
+            &nbsp;
+            {{ button.link({url:'/news/edit/'~news.id, text: 'edit', class: 'btn-warning'}) }}
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}

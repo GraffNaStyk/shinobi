@@ -2,6 +2,7 @@
 
 namespace App\Db;
 
+use App\Core\App;
 use App\Db\Eloquent\Builder;
 use App\Db\Eloquent\Handle;
 use App\Db\Eloquent\Variables;
@@ -212,36 +213,24 @@ class Db
         return $this->execute();
     }
 
-    public function where(string $item, string $is, ?string $item2): Db
+    public function where(string $item, string $is, string $item2): Db
     {
-    	if ($item2 === null) {
-		    return $this;
-	    }
-    	
         $this->appendToQuery();
         $this->query .= "{$this->prepareValueForWhere($item)} {$is} :{$this->setValue($item, $item2)}";
         
         return $this;
     }
 
-    public function orWhere(string $item, string $is, ?string $item2): Db
+    public function orWhere(string $item, string $is, string $item2): Db
     {
-	    if ($item2 === null) {
-		    return $this;
-	    }
-	    
         $this->appendToQuery(true);
         $this->query .= "{$this->prepareValueForWhere($item)} {$is} :{$this->setValue($item, $item2)} ";
         
         return $this;
     }
     
-    public function whereNull(?string $item): Db
+    public function whereNull(string $item): Db
     {
-	    if ($item === null) {
-		    return $this;
-	    }
-	    
         $this->appendToQuery();
         $this->query .= "{$this->prepareValueForWhere($item)} IS NULL ";
         
@@ -250,46 +239,30 @@ class Db
     
     public function whereNotNull(string $item): Db
     {
-	    if ($item === null) {
-		    return $this;
-	    }
-	    
         $this->appendToQuery();
         $this->query .= "{$this->prepareValueForWhere($item)} IS NOT NULL ";
         
         return $this;
     }
     
-    public function orWhereNull(?string $item): Db
+    public function orWhereNull(string $item): Db
     {
-	    if ($item === null) {
-		    return $this;
-	    }
-	    
         $this->appendToQuery(true);
         $this->query .= "{$this->prepareValueForWhere($item)} IS NULL ";
         
         return $this;
     }
     
-    public function orWhereNotNull(?string $item): Db
+    public function orWhereNotNull(string $item): Db
     {
-	    if ($item === null) {
-		    return $this;
-	    }
-	    
         $this->appendToQuery(true);
         $this->query .= "{$this->prepareValueForWhere($item)} IS NOT NULL ";
         
         return $this;
     }
     
-    public function whereIn(?string $item, array $items): Db
+    public function whereIn(string $item, array $items): Db
     {
-	    if ($item === null) {
-		    return $this;
-	    }
-
         $items = "'".implode("', '", $items)."'";
         $this->appendToQuery();
         $this->query .= "{$this->prepareValueForWhere($item)} IN ({$items}) ";
@@ -297,12 +270,8 @@ class Db
         return $this;
     }
     
-    public function whereNotIn(?string $item, array $items): Db
+    public function whereNotIn(string $item, array $items): Db
     {
-	    if ($item === null) {
-		    return $this;
-	    }
-	    
         $items = "'".implode("', '", $items)."'";
         $this->appendToQuery();
         $this->query .= "{$this->prepareValueForWhere($item)} NOT IN ({$items}) ";
@@ -310,12 +279,8 @@ class Db
         return $this;
     }
     
-    public function whereBetween(?string $item, array $items): Db
+    public function whereBetween(string $item, array $items): Db
     {
-	    if ($item === null) {
-		    return $this;
-	    }
-	    
         $this->appendToQuery();
         $this->query .= "{$this->prepareValueForWhere($item)} BETWEEN
                             :{$this->setValue($item, $items[0])} AND :{$this->setValue($item, $items[1])} ";
@@ -367,6 +332,20 @@ class Db
     
         return $this;
     }
+    
+    public function paginate(int $page): Db
+    {
+    	$this->limit(App::PER_PAGE)
+	    ->offset(($page-1)*App::PER_PAGE);
+
+    	return $this;
+    }
+    
+    public function create(array $values)
+    {
+    	$this->insert($values);
+    	$this->execute();
+    }
 
     public function first()
     {
@@ -375,7 +354,7 @@ class Db
         return $this->execute();
     }
 
-    public function get(): array
+    public function get()
     {
         return $this->execute();
     }
@@ -451,8 +430,6 @@ class Db
 
     private function execute()
     {
-        $this->setData();
-        
 	    if ($this->debug) {
 		    $this->develop();
 	    }

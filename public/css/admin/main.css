@@ -2,6 +2,16 @@ body {
   font-family: 'Nunito', sans-serif !important;
 }
 
+:root {
+  --main-black-color: #100c0c;
+  --black-border: #252525;
+  --grey-border: #e6e6ec;
+  --main-white: #fafafa;
+  --main-orange: #ec781c;
+  --text-in-dark-color: #fff;
+  --text-in-white-color: #333;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 15% 85%;
@@ -194,4 +204,13 @@ i {
 
 .ss-main .ss-single-selected .placeholder {
   overflow: hidden;
+}
+
+label {
+  position: relative;
+}
+
+.table-sort thead tr th::after {
+  color: inherit;
+  content: " \025B8"!important;
 }
