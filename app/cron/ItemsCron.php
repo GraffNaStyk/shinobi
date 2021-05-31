@@ -8,6 +8,6 @@ class ItemsCron
 {
     public function __construct()
     {
-		return (new Items());
+	    return (new Items());
     }
 }

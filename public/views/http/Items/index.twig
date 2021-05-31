@@ -2,14 +2,14 @@
 
 {% block content %}
   <h3 class="mt-3 text-center">Items</h3>
-  <div class="d-flex sort__items justify-content-between">
-    <a class="{{ active == 'distance' ? 'active' }}" href="{{ url('/items/distance') }}">Distance</a>
-    <a class="{{ active == 'boots' ? 'active' }}" href="{{ url('/items/boots') }}">Boots</a>
-    <a class="{{ active == 'helmets' ? 'active' }}" href="{{ url('/items/helmets') }}">Helmets</a>
-    <a class="{{ active == 'swords' ? 'active' }}" href="{{ url('/items/swords') }}">Swords</a>
-    <a class="{{ active == 'glovers' ? 'active' }}" href="{{ url('/items/glovers') }}">Glovers</a>
-    <a class="{{ active == 'armors' ? 'active' }}" href="{{ url('/items/armors') }}">Armors</a>
-    <a class="{{ active == 'legs' ? 'active' }}" href="{{ url('/items/legs') }}">Legs</a>
+  <div class="d-flex sort__items justify-content-between flex-wrap">
+    <a class="{{ active == 'distance' ? 'active' }} m-1" href="{{ url('/items/distance') }}">Distance</a>
+    <a class="{{ active == 'boots' ? 'active' }} m-1" href="{{ url('/items/boots') }}">Boots</a>
+    <a class="{{ active == 'helmets' ? 'active' }} m-1" href="{{ url('/items/helmets') }}">Helmets</a>
+    <a class="{{ active == 'swords' ? 'active' }} m-1" href="{{ url('/items/swords') }}">Swords</a>
+    <a class="{{ active == 'glovers' ? 'active' }} m-1" href="{{ url('/items/glovers') }}">Glovers</a>
+    <a class="{{ active == 'armors' ? 'active' }} m-1" href="{{ url('/items/armors') }}">Armors</a>
+    <a class="{{ active == 'legs' ? 'active' }} m-1" href="{{ url('/items/legs') }}">Legs</a>
   </div>
   <div class="table-responsive">
     <table class="table table-sort">
