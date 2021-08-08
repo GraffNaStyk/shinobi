@@ -13,7 +13,7 @@ class IndexController extends Controller
         $this->setTitle('Home');
     }
 
-    public function index()
+    public function index(): string
     {
         return $this->render([
         	'newses' => News::as('n')->select(['p.name', 'n.title', 'n.text', 'n.created_at'])

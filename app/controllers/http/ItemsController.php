@@ -3,7 +3,7 @@
 namespace App\Controllers\Http;
 
 use App\Controllers\Controller;
-use App\Db\Eloquent\Value;
+use App\Facades\Db\Value;
 use App\Model\Item;
 
 class ItemsController extends Controller
@@ -13,7 +13,7 @@ class ItemsController extends Controller
         parent::__construct();
     }
 
-    public function index(string $type='armors')
+    public function index(string $type='armors'): string
     {
     	$data = Item::as('i')
 		    ->select([new Value('i.*'), 'img.path', 'img.ext', 'img.hash'])
@@ -21,7 +21,7 @@ class ItemsController extends Controller
 		    ->where('i.type', '=', $type)
 		    ->get();
 
-    	$this->render([
+    	return $this->render([
     		'items'  => \App\Helpers\Item::parse($data),
 		    'keys'   => array_keys(get_object_vars($data[0])),
 		    'active' => $type

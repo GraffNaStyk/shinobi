@@ -6,6 +6,16 @@ if ((string) php_sapi_name() !== 'cli') {
     header('location: index.php');
 }
 
+if ($argv[1] === 'serve') {
+    if (isset($argv[2])) {
+        $host = $argv[2];
+    } else {
+        $host = 'localhost';
+    }
+
+    exec("php -S {$host}:8000 index.php");
+}
+
 require_once __DIR__.'/index.php';
 
 Console::dispatch($argv);

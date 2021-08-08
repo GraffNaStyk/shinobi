@@ -15,7 +15,7 @@ class NewsController extends Controller
 		parent::__construct();
 	}
 	
-	public function index()
+	public function index(): string
 	{
 		return $this->render([
 			'newses' => News::as('n')->select(['p.name', 'n.title', 'n.id', 'n.created_at', 'n.is_active'])
@@ -25,34 +25,36 @@ class NewsController extends Controller
 		]);
 	}
 	
-	public function add()
+	public function add(): string
 	{
 		return $this->render([
 			'players' => Player::select(['name as text', 'id as value'])->get()
 		]);
 	}
 	
-	public function store(Request $request)
+	public function store(Request $request): string
 	{
 		if (! $this->validate($request->all(), StoreNewsValidator::class)) {
-			$this->sendError();
+			return $this->sendError();
 		}
 		
 		News::insert($request->all())->exec();
-		$this->sendSuccess('News added!', '/news');
+		return $this->sendSuccess('News added!', [
+			'to' => '/news'
+		]);
 	}
 	
-	public function edit(int $id)
+	public function edit(int $id): void
 	{
 	
 	}
 	
-	public function active(Request $request)
+	public function active(Request $request): string
 	{
 		News::update(['is_active' => (int) $request->get('active') === 0 ? 1 : 0])
 			->where('id', '=', $request->get('id'))
 			->exec();
 
-		$this->sendSuccess('', '', true);
+		return $this->sendSuccess('', ['reload' => true]);
 	}
 }

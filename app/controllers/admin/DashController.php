@@ -3,7 +3,6 @@
 namespace App\Controllers\Admin;
 
 use App\Controllers\Controller;
-use App\Facades\Http\View;
 
 class DashController extends Controller
 {
@@ -12,8 +11,8 @@ class DashController extends Controller
 		parent::__construct();
 	}
 	
-	public function index()
+	public function index(): string
 	{
-		return View::render();
+		return $this->render();
 	}
 }

@@ -20,20 +20,20 @@ class PlayerChangeController extends Controller
         parent::__construct();
     }
     
-    public function changeEmail()
+    public function changeEmail(): string
     {
     	return $this->render();
     }
 	
-	public function changePassword()
+	public function changePassword(): string
 	{
 		return $this->render();
 	}
 
-    public function storeEmail(Request $request)
+    public function storeEmail(Request $request): string
     {
 		if (! $this->validate($request->all(), ChangeEmailValidator::class)) {
-			$this->sendError();
+			return $this->sendError();
 		}
 	
 	    Account::update(['email' => $request->get('email')])
@@ -41,13 +41,13 @@ class PlayerChangeController extends Controller
 			->exec();
 		
 		Auth::refresh();
-		$this->sendSuccess('Email changed');
+		return $this->sendSuccess('Email changed');
     }
 
-	public function storePassword(Request $request)
+	public function storePassword(Request $request): string
 	{
 		if (! $this->validate($request->all(), ChangePasswordValidator::class)) {
-			$this->sendError();
+			return $this->sendError();
 		}
 
 		Account::update(['password' => sha1($request->get('password'))])
@@ -55,6 +55,6 @@ class PlayerChangeController extends Controller
 			->exec();
 		
 		Auth::refresh();
-		$this->sendSuccess('Password changed');
+		return $this->sendSuccess('Password changed');
 	}
 }

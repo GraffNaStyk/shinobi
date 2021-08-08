@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+  <title>{{ page.title }}</title>
+    {{ css|raw }}
+  <input type="hidden" name="url" value="{{ url() }}">
+</head>
+<body>
+{% import 'components/form.twig' as form %}
+{% import 'components/button.twig' as button %}
+<nav class="navbar navbar-expand-lg top__nav justify-content-between">
+  <a href="{{ url('/dash') }}" class="logo">DASHBOARD</a>
+
+  <div class="d-flex align-items-center">
+    <a href="#" class="menu__burger"><i class="fa fa-bars"></i></a>
+    <a href="{{ url('/settings') }}" {{ tooltip('settings') }} ><i class="fa fa-cog"></i></a>
+    <a href="#" {{ tooltip('profile') }}><i data-menu="toggle" data-target="#menu" class="fa fa-user"></i></a>
+
+    <div class="box__menu flex-column d-none" id="menu">
+
+    </div>
+
+    <a href="{{ url('/account/logout') }}" {{ tooltip('logout') }}> <i class="fa fa-power-off"></i> </a>
+
+  </div>
+</nav>
+
+<section class="grid">
+
+  <aside class="left-panel d-flex">
+    <a href="{{ url() }}"> <i class="fa fa-home"></i> Główna</a>
+
+    <a href="#" class="has__parent"> <i class="fa fa-users"></i> Posty</a>
+    <div class="parent">
+      <a href="{{ url('/news/add') }}">nowy</a>
+      <a href="{{ url('/news') }}">Lista</a>
+    </div>
+
+  </aside>
+
+  <main class="right-panel">
+    {% include 'layouts/inc/alert.twig' %}
+    {% block content %}
+    {% endblock %}
+  </main>
+</section>
+
+{% include 'components/modal.twig' %}
+{{ js|raw }}
+</body>
+</html>

@@ -17,7 +17,7 @@ class PlayerController extends Controller
         parent::__construct();
     }
     
-    public function add()
+    public function add(): string
     {
     	return $this->render([
 		    'professions' => Character::getCharactersToSelect(),
@@ -25,24 +25,24 @@ class PlayerController extends Controller
 	    ]);
     }
 
-    public function store(Request $request)
+    public function store(Request $request): string
     {
 		if (! $this->validate($request->all(), CreateCharacterValidator::class)) {
-			$this->sendError();
+			return $this->sendError();
 		}
 		
 		$request->set('account_id', Auth::id());
 		Player::create($request->all());
-		$this->sendSuccess('Character created');
+		return $this->sendSuccess('Character created', ['reload' => true]);
     }
 
-    public function delete(Request $request)
+    public function delete(Request $request): string
     {
 		Player::delete()
 			->where('account_id', '=', Auth::id())
 			->where('id', '=', $request->get('id'))
 			->exec();
 		
-		$this->sendSuccess('Player delete');
+		return $this->sendSuccess('Player delete');
     }
 }

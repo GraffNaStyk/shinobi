@@ -2,7 +2,7 @@
 
 namespace App\Model;
 
-use App\Db\Model;
+use App\Facades\Db\Model;
 use App\Helpers\Town;
 
 class Player extends Model

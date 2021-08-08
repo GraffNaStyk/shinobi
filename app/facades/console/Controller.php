@@ -2,36 +2,51 @@
 
 namespace App\Facades\Console;
 
+use App\Helpers\Dir;
+
 class Controller
 {
+    use FileCreator;
+
     private string $file;
     private string $name;
-    
+    private bool $withView;
+    private array $views = [
+        'index.twig',
+        'add.twig',
+        'edit.twig',
+        'show.twig'
+    ];
+
     public function __construct($args = [])
     {
-	    $this->namespace = $args[0];
-	    $this->name      = $args[1];
-        $this->file = file_get_contents(app_path('app/facades/http/controller'));
+        $this->namespace = $args[0];
+        $this->name = ucfirst($args[1]);
+        $this->withView = (isset($args[2]) && $args[2] === '-v');
+        $this->file = file_get_contents(app_path('app/facades/files/controller'));
         $this->make();
-        $this->put();
-    }
-    
-    public function make()
-    {
-        $this->file = str_replace('CLASSNAME', ucfirst($this->name).'Controller', $this->file);
-        $this->file = str_replace('PATH', ucfirst($this->namespace), $this->file);
-    }
-    
-    public function put()
-    {
-        if (file_put_contents(
-            app_path('app/controllers/'.ucfirst($this->namespace).'/'.ucfirst($this->name).'Controller.php'),
+        $this->putFile(
+            'app/controllers/'.$this->namespace.'/'.$this->name.'Controller.php',
             $this->file
-        )) {
-            Console::output(
-                'Controller in path: App/Controllers/'.ucfirst($this->namespace).'/'.ucfirst($this->name).'Controller.php created.',
-                'green'
-            );
+        );
+    }
+
+    public function make(): void
+    {
+        $this->file = str_replace('CLASSNAME', $this->name.'Controller', $this->file);
+        $this->file = str_replace('PATH', ucfirst($this->namespace), $this->file);
+
+        if ($this->withView) {
+            Dir::create(view_path(strtolower($this->namespace).'/'.$this->name));
+
+            foreach ($this->views as $view) {
+                if (! file_exists(view_path(strtolower($this->namespace).'/'.$this->name.'/'.$view))) {
+                    file_put_contents(
+                        view_path(strtolower($this->namespace).'/'.$this->name.'/'.$view),
+                        file_get_contents(app_path('app/facades/files/view'))
+                    );
+                }
+            }
         }
     }
 }

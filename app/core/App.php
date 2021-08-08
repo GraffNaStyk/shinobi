@@ -2,7 +2,7 @@
 
 namespace App\Core;
 
-use App\Db\Db;
+use App\Facades\Db\Db;
 use App\Facades\Env\Env;
 use App\Helpers\Loader;
 
@@ -15,8 +15,8 @@ final class App
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
-	
-	    $environment = Env::set();
+
+        $environment = Env::set();
 
         if (! empty($environment)) {
             Db::init($environment);

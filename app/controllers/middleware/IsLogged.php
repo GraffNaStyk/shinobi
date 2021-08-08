@@ -14,8 +14,8 @@ final class IsLogged
     public function before(Request $request, Router $router)
     {
     	$account = Account::select(['id'])->where('id', '=', \App\Controllers\Auth::id())->exist();
-    	
-        if (! Session::has('account') || ! $account) {
+
+        if (! Session::has('user') || ! $account) {
         	if (Request::isAjax()) {
 		        Response::json([], 401);
 	        } else {

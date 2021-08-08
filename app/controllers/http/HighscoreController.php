@@ -15,7 +15,7 @@ class HighscoreController extends Controller
         $this->setTitle('Highscores');
     }
 
-    public function index()
+    public function index(): string
     {
     	return $this->render([
     		'players' => Character::prepareCharactersToView(
@@ -26,7 +26,7 @@ class HighscoreController extends Controller
 	    ]);
     }
     
-    public function filter(string $type)
+    public function filter(string $type): void
     {
     }
 }

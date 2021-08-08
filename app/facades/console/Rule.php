@@ -4,24 +4,21 @@ namespace App\Facades\Console;
 
 class Rule
 {
+    use FileCreator;
+
     private string $file;
     private string $name;
-    
+
     public function __construct($args = [])
     {
         $this->name = $args[0];
-        $this->file = file_get_contents(app_path('app/facades/http/rule'));
+        $this->file = file_get_contents(app_path('app/facades/files/rule'));
         $this->make();
     }
-    
-    public function make()
+
+    public function make(): void
     {
         $this->file = str_replace('CLASSNAME', ucfirst($this->name).'Validator', $this->file);
-        if (file_put_contents(
-            app_path('app/rules/'.ucfirst($this->name).'Validator.php'),
-            $this->file
-        )) {
-            Console::output('Rule created successfully!', 'green');
-        }
+        $this->putFile('app/rules/'.ucfirst($this->name).'Validator.php', $this->file);
     }
 }

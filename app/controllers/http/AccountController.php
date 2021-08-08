@@ -22,12 +22,12 @@ class AccountController extends Controller
 		$this->setTitle('Account');
 	}
 	
-	public function index()
+	public function index(): string
 	{
 		return $this->render();
 	}
 	
-	public function add()
+	public function add():string
 	{
 		return $this->render([
 			'professions' => Character::getCharactersToSelect(),
@@ -35,28 +35,28 @@ class AccountController extends Controller
 		]);
 	}
 
-	public function login(Request $request)
+	public function login(Request $request): string
 	{
 		if (! $this->validate($request->all(), LoginValidator::class)) {
-			$this->sendError();
+			return $this->sendError();
 		}
 		
 		$acc = Account::select()->where('name', '=', $request->get('name'))->exist();
 		
 		if ($acc && $acc->password === sha1($request->get('password'))) {
 			Auth::login($acc);
-			$this->sendSuccess('Logged successfully', [
+			return $this->sendSuccess('Logged successfully', [
 				'to' => '/account/show'
 			]);
 		}
 		
-		$this->sendError('Wrong account or password');
+		return $this->sendError('Wrong account or password');
 	}
 	
-	public function store(Request $request)
+	public function store(Request $request): string
 	{
 		if (! $this->validate($request->all(), CreateAccountValidator::class)) {
-			$this->sendError();
+			return $this->sendError();
 		}
 		
 		$fields = $request->all();
@@ -72,33 +72,33 @@ class AccountController extends Controller
 				$errors[] = $item;
 			}
 			
-			$this->sendError('Field name and nickname must be same');
+			return $this->sendError('Field name and nickname must be same');
 		}
 
 		try {
 			$request->set('password', sha1($request->get('password')));
 			Account::create($request->all());
 			Player::create($fields);
-			$this->sendSuccess('Account registered successful', [
+			return $this->sendSuccess('Account registered successful', [
 				'to' => '/account'
 			]);
 		} catch (\Exception $exception) {
-			$this->sendError('There was an error in your request, please try in a minute');
+			return $this->sendError('There was an error in your request, please try in a minute');
 		}
 	}
 	
-	public function show()
+	public function show(): string
 	{
 		return $this->render([
 			'players' => Character::prepareCharactersToView(
 				Player::select(['name', 'level', 'vocation', 'id'])
 					->where('account_id', '=', Auth::id())->order(['level'], 'desc')->get()
 			),
-			'account' => Auth::account(),
+			'account' => Auth::user(),
 		]);
 	}
 	
-	public function logout()
+	public function logout(): void
 	{
 		Auth::logout();
 		$this->redirect('/account');

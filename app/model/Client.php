@@ -1,7 +1,7 @@
 <?php
 namespace App\Model;
 
-use App\Db\Model;
+use App\Facades\Db\Model;
 
 class Client extends Model
 {
