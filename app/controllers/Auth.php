@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Facades\Http\Session;
 use App\Facades\Log\Log;
+use App\Model\Account;
 use App\Model\User;
 
 class Auth
@@ -32,7 +33,7 @@ class Auth
 	
 	public static function refresh(): void
     {
-        $user = User::select()->where('id', '=', self::id())->exist();
+        $user = Account::select()->where('id', '=', self::id())->exist();
 
         if ($user) {
             self::login($user);

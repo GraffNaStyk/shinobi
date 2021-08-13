@@ -1,0 +1,30 @@
+{% extends layout %}
+
+{% block content %}
+  <h3 class="mt-3 mb-3 text-center">Spells</h3>
+  <div class="table-responsive">
+    {% for key,spell in spells %}
+      <h4>{{ key|capitalize }}</h4>
+        <table class="table">
+          <tr>
+            <td>Lvl</td>
+            <th>Name</th>
+            <th>Words</th>
+            <th>Mana</th>
+            <th>Exhausted</th>
+          </tr>
+          <tbody>
+          {% for item in spell %}
+            <tr>
+              <td>{{ item.lvl }}</td>
+              <td>{{ item.name }}</td>
+              <td>{{ item.words }}</td>
+              <td>{{ item.mana }}</td>
+              <td>{{ item.exhausted }}</td>
+            </tr>
+          {% endfor %}
+          </tbody>
+        </table>
+    {% endfor %}
+  </div>
+{% endblock %}

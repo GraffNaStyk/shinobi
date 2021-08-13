@@ -41,7 +41,7 @@ class PlayerChangeController extends Controller
 			->exec();
 		
 		Auth::refresh();
-		return $this->sendSuccess('Email changed');
+		return $this->sendSuccess('Email changed', ['reload' => true]);
     }
 
 	public function storePassword(Request $request): string

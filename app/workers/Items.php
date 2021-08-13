@@ -2,7 +2,6 @@
 
 namespace App\Workers;
 
-use App\Helpers\Storage;
 use App\Model\Item;
 
 class Items

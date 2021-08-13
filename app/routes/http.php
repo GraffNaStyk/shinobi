@@ -23,6 +23,8 @@ Route::namespace('App\Controllers\Http', function () {
 	Route::get('/items', 'Items@index');
 	Route::get('/items/{type}', 'Items@index');
 	
+	Route::get('/spells', 'Spells@index');
+
 	Route::middleware('isLogged', function () {
 		Route::get('/account/show', 'Account@show');
 		Route::post('/player/store', 'Player@store');

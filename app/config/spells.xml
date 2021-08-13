@@ -1,0 +1,1092 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spells>
+	<!-- all -->
+	<instant name="Chakra Strike" words="chakra strike" lvl="5" mana="20" prem="0" range="4" casterTargetOrDirection="0" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="all/chakra strike.lua">
+	</instant>
+	<instant name="Heal" words="heal" lvl="10" mana="20" prem="0" aggressive="0" selftarget="1" exhaustion="1000" needlearn="0" script="all/heal.lua">
+	</instant>
+	<instant name="Regeneration" words="regeneration" lvl="150" mana="100" prem="0" aggressive="0" selftarget="1" exhaustion="1000" needlearn="0" script="all/regeneration.lua">
+	</instant>
+	<instant name="Light" words="light" lvl="1" mana="10" prem="0" aggressive="0" selftarget="1" exhaustion="1000" needlearn="0" script="all/light.lua">
+	</instant>
+	<instant name="Speed up" words="speed up" lvl="20" mana="100" prem="1" aggressive="0" selftarget="1" exhaustion="1000" needlearn="0" script="all/speed.lua">
+	</instant>
+	<!-- naruto -->
+	<instant name="Naruto Rendan" words="naruto rendan" lvl="20" mana="80" prem="0" range="3" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="naruto/naruto rendan.lua">
+		<vocation name="Naruto"/>
+		<vocation name="Naruto2"/>
+		<vocation name="Naruto3"/>
+		<vocation name="Naruto4"/>
+		<vocation name="Naruto5"/>
+		<vocation name="Naruto6"/>
+	</instant>
+	<instant name="Rasengan" words="rasengan" lvl="40" mana="150" prem="0" range="3" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="naruto/rasengan.lua">
+		<vocation name="Naruto"/>
+		<vocation name="Naruto2"/>
+		<vocation name="Naruto3"/>
+		<vocation name="Naruto4"/>
+		<vocation name="Naruto5"/>
+		<vocation name="Naruto6"/>
+	</instant>
+	<instant name="Oodama Rasengan" words="oodama rasengan" lvl="70" mana="250" prem="0" direction ="1" blockwalls="1" exhaustion="2000" needlearn="0" script="naruto/oodama rasengan.lua">
+		<vocation name="Naruto"/>
+		<vocation name="Naruto2"/>
+		<vocation name="Naruto3"/>
+		<vocation name="Naruto4"/>
+		<vocation name="Naruto5"/>
+		<vocation name="Naruto6"/>
+	</instant>
+	<instant name="Rasenrengan" words="rasenrengan" lvl="100" mana="350" prem="0" range="3" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="naruto/rasenrengan.lua">
+		<vocation name="Naruto"/>
+		<vocation name="Naruto2"/>
+		<vocation name="Naruto3"/>
+		<vocation name="Naruto4"/>
+		<vocation name="Naruto5"/>
+		<vocation name="Naruto6"/>
+	</instant>
+	<instant name="Rasenshuriken" words="rasenshuriken" lvl="100" mana="400" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="naruto/rasenshuriken.lua">
+		<vocation name="Naruto"/>
+		<vocation name="Naruto2"/>
+		<vocation name="Naruto3"/>
+		<vocation name="Naruto4"/>
+		<vocation name="Naruto5"/>
+		<vocation name="Naruto6"/>
+	</instant>
+	<instant name="Bijuudama" words="bijuudama" lvl="200" mana="600" prem="0" range="5" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="naruto/bijuudama.lua">
+		<vocation name="Naruto"/>
+		<vocation name="Naruto2"/>
+		<vocation name="Naruto3"/>
+		<vocation name="Naruto4"/>
+		<vocation name="Naruto5"/>
+		<vocation name="Naruto6"/>
+	</instant>
+	<instant name="Oodama Rasen Tairengan" words="oodama rasen tairengan" lvl="200" mana="700" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="naruto/oodama rasen tairengan.lua">
+		<vocation name="Naruto"/>
+		<vocation name="Naruto2"/>
+		<vocation name="Naruto3"/>
+		<vocation name="Naruto4"/>
+		<vocation name="Naruto5"/>
+		<vocation name="Naruto6"/>
+	</instant>
+	<!-- naruto special -->
+	<!-- sasuke -->
+	<instant name="Katon Goukakyuu no Jutsu" words="katon goukakyuu no jutsu" lvl="10" mana="40" prem="0" direction="1" blockwalls="1" exhaustion="2000" needlearn="0" script="sasuke/katon goukakyuu no jutsu.lua">
+		<vocation name="Sasuke"/>
+		<vocation name="Sasuke2"/>
+		<vocation name="Sasuke3"/>
+		<vocation name="Sasuke4"/>
+		<vocation name="Sasuke5"/>
+		<vocation name="Sasuke6"/>
+	</instant>
+	<instant name="Katon Housenka no Jutsu" words="katon housenka no jutsu" lvl="20" mana="80" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="sasuke/katon housenka no jutsu.lua">
+		<vocation name="Sasuke"/>
+		<vocation name="Sasuke2"/>
+		<vocation name="Sasuke3"/>
+		<vocation name="Sasuke4"/>
+		<vocation name="Sasuke5"/>
+		<vocation name="Sasuke6"/>
+	</instant>
+	<instant name="Chidori" words="chidori" lvl="40" mana="150" prem="0" range="3" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="sasuke/chidori.lua">
+		<vocation name="Sasuke"/>
+		<vocation name="Sasuke2"/>
+		<vocation name="Sasuke3"/>
+		<vocation name="Sasuke4"/>
+		<vocation name="Sasuke5"/>
+		<vocation name="Sasuke6"/>
+	</instant>
+	<instant name="Katon Ryuuka no Jutsu" words="katon ryuuka no jutsu" lvl="70" mana="250" prem="0" direction="1" blockwalls="1" exhaustion="2000" needlearn="0" script="sasuke/katon ryuuka no jutsu.lua">
+		<vocation name="Sasuke"/>
+		<vocation name="Sasuke2"/>
+		<vocation name="Sasuke3"/>
+		<vocation name="Sasuke4"/>
+		<vocation name="Sasuke5"/>
+		<vocation name="Sasuke6"/>
+	</instant>
+	<instant name="Chidori Eiso" words="chidori eiso" lvl="100" mana="350" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="sasuke/chidori eiso.lua">
+		<vocation name="Sasuke"/>
+		<vocation name="Sasuke2"/>
+		<vocation name="Sasuke3"/>
+		<vocation name="Sasuke4"/>
+		<vocation name="Sasuke5"/>
+		<vocation name="Sasuke6"/>
+	</instant>
+	<instant name="Chidori Nagashi" words="chidori nagashi" lvl="100" mana="400" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="sasuke/chidori nagashi.lua">
+		<vocation name="Sasuke"/>
+		<vocation name="Sasuke2"/>
+		<vocation name="Sasuke3"/>
+		<vocation name="Sasuke4"/>
+		<vocation name="Sasuke5"/>
+		<vocation name="Sasuke6"/>
+	</instant>
+	<instant name="Amaterasu" words="amaterasu" lvl="200" mana="600" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="sasuke/amaterasu.lua">
+		<vocation name="Sasuke"/>
+		<vocation name="Sasuke2"/>
+		<vocation name="Sasuke3"/>
+		<vocation name="Sasuke4"/>
+		<vocation name="Sasuke5"/>
+		<vocation name="Sasuke6"/>
+	</instant>
+	<instant name="Kirin" words="kirin" lvl="200" mana="700" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="sasuke/kirin.lua">
+		<vocation name="Sasuke"/>
+		<vocation name="Sasuke2"/>
+		<vocation name="Sasuke3"/>
+		<vocation name="Sasuke4"/>
+		<vocation name="Sasuke5"/>
+		<vocation name="Sasuke6"/>
+	</instant>
+	<!-- sasuke special -->
+	<!-- sakura -->
+	<instant name="Fubuki no Jutsu" words="fubuki no jutsu" lvl="10" mana="40" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="sakura/fubuki no jutsu.lua">
+		<vocation name="Naruto"/>
+		<vocation name="Naruto2"/>
+		<vocation name="Naruto3"/>
+		<vocation name="Naruto4"/>
+		<vocation name="Naruto5"/>
+		<vocation name="Naruto6"/>
+		<vocation name="Sakura"/>
+		<vocation name="Sakura2"/>
+		<vocation name="Sakura3"/>
+		<vocation name="Sakura4"/>
+		<vocation name="Sakura5"/>
+		<vocation name="Sakura6"/>
+		<vocation name="Kankurou"/>
+		<vocation name="Kankurou2"/>
+		<vocation name="Kankurou3"/>
+		<vocation name="Kankurou4"/>
+		<vocation name="Kankurou5"/>
+		<vocation name="Kankurou6"/>
+		<vocation name="Tenten"/>
+		<vocation name="Tenten2"/>
+		<vocation name="Tenten3"/>
+		<vocation name="Tenten4"/>
+		<vocation name="Tenten5"/>
+		<vocation name="Tenten6"/>
+		<vocation name="Shikamaru"/>
+		<vocation name="Shikamaru2"/>
+		<vocation name="Shikamaru3"/>
+		<vocation name="Shikamaru4"/>
+		<vocation name="Shikamaru5"/>
+		<vocation name="Shikamaru6"/>
+	</instant>
+	<instant name="Chiyute no Jutsu" words="chiyute no jutsu" lvl="20" mana="80" prem ="0" aggressive="0" selftarget="1" exhaustion="2000" needlearn="0" script="sakura/chiyute no jutsu.lua">
+		<vocation name="Sakura"/>
+		<vocation name="Sakura2"/>
+		<vocation name="Sakura3"/>
+		<vocation name="Sakura4"/>
+		<vocation name="Sakura5"/>
+		<vocation name="Sakura6"/>
+	</instant>
+	<instant name="Tsutenkyaku" words="tsutenkyaku" lvl="40" mana="150" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="sakura/tsutenkyaku.lua">
+		<vocation name="Sakura"/>
+		<vocation name="Sakura2"/>
+		<vocation name="Sakura3"/>
+		<vocation name="Sakura4"/>
+		<vocation name="Sakura5"/>
+		<vocation name="Sakura6"/>
+	</instant>
+	<instant name="Shannaro" words="shannaro" lvl="70" mana="250" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="sakura/shannaro.lua">
+		<vocation name="Sakura"/>
+		<vocation name="Sakura2"/>
+		<vocation name="Sakura3"/>
+		<vocation name="Sakura4"/>
+		<vocation name="Sakura5"/>
+		<vocation name="Sakura6"/>
+	</instant>
+	<instant name="Chakra no Mesu" words="chakra no mesu" lvl="100" mana="350" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="sakura/chakra no mesu.lua">
+		<vocation name="Sakura"/>
+		<vocation name="Sakura2"/>
+		<vocation name="Sakura3"/>
+		<vocation name="Sakura4"/>
+		<vocation name="Sakura5"/>
+		<vocation name="Sakura6"/>
+		<vocation name="Ino"/>
+		<vocation name="Ino2"/>
+		<vocation name="Ino3"/>
+		<vocation name="Ino4"/>
+		<vocation name="Ino5"/>
+		<vocation name="Ino6"/>
+	</instant>
+	<instant name="Gouwan" words="gouwan" lvl="100" mana="400" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="sakura/gouwan.lua">
+		<vocation name="Sakura"/>
+		<vocation name="Sakura2"/>
+		<vocation name="Sakura3"/>
+		<vocation name="Sakura4"/>
+		<vocation name="Sakura5"/>
+		<vocation name="Sakura6"/>
+	</instant>
+	<instant name="Oukaretsushou" words="oukaretsushou" lvl="200" mana="600" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="sakura/oukaretsushou.lua">
+		<vocation name="Sakura"/>
+		<vocation name="Sakura2"/>
+		<vocation name="Sakura3"/>
+		<vocation name="Sakura4"/>
+		<vocation name="Sakura5"/>
+		<vocation name="Sakura6"/>
+	</instant>
+	<instant name="Oukashou" words="oukashou" lvl="200" mana="700" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="sakura/oukashou.lua">
+		<vocation name="Sakura"/>
+		<vocation name="Sakura2"/>
+		<vocation name="Sakura3"/>
+		<vocation name="Sakura4"/>
+		<vocation name="Sakura5"/>
+		<vocation name="Sakura6"/>
+	</instant>
+	<!-- sakura special -->
+	<!-- gaara -->
+	<instant name="Suna Shuriken no Jutsu" words="suna shuriken no jutsu" lvl="10" mana="40" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="gaara/suna shuriken no jutsu.lua">
+		<vocation name="Gaara"/>
+		<vocation name="Gaara2"/>
+		<vocation name="Gaara3"/>
+		<vocation name="Gaara4"/>
+		<vocation name="Gaara5"/>
+		<vocation name="Gaara6"/>
+	</instant>
+	<instant name="Sabaku Kyuu" words="sabaku kyuu" lvl="20" mana="80" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="gaara/sabaku kyuu.lua">
+		<vocation name="Gaara"/>
+		<vocation name="Gaara2"/>
+		<vocation name="Gaara3"/>
+		<vocation name="Gaara4"/>
+		<vocation name="Gaara5"/>
+		<vocation name="Gaara6"/>
+	</instant>
+	<instant name="Sabaku Sousou" words="sabaku sousou" lvl="40" mana="150" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="gaara/sabaku sousou.lua">
+		<vocation name="Gaara"/>
+		<vocation name="Gaara2"/>
+		<vocation name="Gaara3"/>
+		<vocation name="Gaara4"/>
+		<vocation name="Gaara5"/>
+		<vocation name="Gaara6"/>
+	</instant>
+	<instant name="Ryuusa Bakuryuu" words="ryuusa bakuryuu" lvl="70" mana="250" prem="0" direction="1" blockwalls="1" exhaustion="2000" needlearn="0" script="gaara/ryuusa bakuryuu.lua">
+		<vocation name="Gaara"/>
+		<vocation name="Gaara2"/>
+		<vocation name="Gaara3"/>
+		<vocation name="Gaara4"/>
+		<vocation name="Gaara5"/>
+		<vocation name="Gaara6"/>
+	</instant>
+	<instant name="Sabaku Hando" words="sabaku hando" lvl="100" mana="350" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="gaara/sabaku hando.lua">
+		<vocation name="Gaara"/>
+		<vocation name="Gaara2"/>
+		<vocation name="Gaara3"/>
+		<vocation name="Gaara4"/>
+		<vocation name="Gaara5"/>
+		<vocation name="Gaara6"/>
+	</instant>
+	<instant name="Suna Shigure" words="suna shigure" lvl="100" mana="400" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="gaara/suna shigure.lua">
+		<vocation name="Gaara"/>
+		<vocation name="Gaara2"/>
+		<vocation name="Gaara3"/>
+		<vocation name="Gaara4"/>
+		<vocation name="Gaara5"/>
+		<vocation name="Gaara6"/>
+	</instant>
+	<instant name="Sabaku Rou" words="sabaku rou" lvl="200" mana="600" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="gaara/sabaku rou.lua">
+		<vocation name="Gaara"/>
+		<vocation name="Gaara2"/>
+		<vocation name="Gaara3"/>
+		<vocation name="Gaara4"/>
+		<vocation name="Gaara5"/>
+		<vocation name="Gaara6"/>
+	</instant>
+	<instant name="Sabaku Taisou" words="sabaku taisou" lvl="200" mana="700" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="gaara/sabaku taisou.lua">
+		<vocation name="Gaara"/>
+		<vocation name="Gaara2"/>
+		<vocation name="Gaara3"/>
+		<vocation name="Gaara4"/>
+		<vocation name="Gaara5"/>
+		<vocation name="Gaara6"/>
+	</instant>
+	<!-- gaara special -->
+	<!-- kankurou -->
+	<instant name="Kugutsu no Jutsu" words="kugutsu no jutsu" lvl="20" mana="80" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="kankurou/kugutsu no jutsu.lua">
+		<vocation name="Kankurou"/>
+		<vocation name="Kankurou2"/>
+		<vocation name="Kankurou3"/>
+		<vocation name="Kankurou4"/>
+		<vocation name="Kankurou5"/>
+		<vocation name="Kankurou6"/>
+	</instant>
+	<instant name="Doku Shuriken" words="doku shuriken" lvl="40" mana="150" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="kankurou/doku shuriken.lua">
+		<vocation name="Kankurou"/>
+		<vocation name="Kankurou2"/>
+		<vocation name="Kankurou3"/>
+		<vocation name="Kankurou4"/>
+		<vocation name="Kankurou5"/>
+		<vocation name="Kankurou6"/>
+	</instant>
+	<instant name="Baribari Hyaku Renpatsu" words="baribari hyaku renpatsu" lvl="70" mana="250" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="kankurou/baribari hyaku renpatsu.lua">
+		<vocation name="Kankurou"/>
+		<vocation name="Kankurou2"/>
+		<vocation name="Kankurou3"/>
+		<vocation name="Kankurou4"/>
+		<vocation name="Kankurou5"/>
+		<vocation name="Kankurou6"/>
+	</instant>
+	<instant name="Kiki Doku" words="kiki doku" lvl="100" mana="350" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="kankurou/kiki doku.lua">
+		<vocation name="Kankurou"/>
+		<vocation name="Kankurou2"/>
+		<vocation name="Kankurou3"/>
+		<vocation name="Kankurou4"/>
+		<vocation name="Kankurou5"/>
+		<vocation name="Kankurou6"/>
+	</instant>
+	<instant name="Doku Bakuhatsu" words="doku bakuhatsu" lvl="100" mana="400" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="kankurou/doku bakuhatsu.lua">
+		<vocation name="Kankurou"/>
+		<vocation name="Kankurou2"/>
+		<vocation name="Kankurou3"/>
+		<vocation name="Kankurou4"/>
+		<vocation name="Kankurou5"/>
+		<vocation name="Kankurou6"/>
+	</instant>
+	<instant name="Akahigi Kiki Sankaku" words="akahigi kiki sankaku" lvl="200" mana="600" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="kankurou/akahigi kiki sankaku.lua">
+		<vocation name="Kankurou"/>
+		<vocation name="Kankurou2"/>
+		<vocation name="Kankurou3"/>
+		<vocation name="Kankurou4"/>
+		<vocation name="Kankurou5"/>
+		<vocation name="Kankurou6"/>
+	</instant>
+	<instant name="Kurohigi Kiki Ippatsu" words="kurohigi kiki ippatsu" lvl="200" mana="700" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="kankurou/kurohigi kiki ippatsu.lua">
+		<vocation name="Kankurou"/>
+		<vocation name="Kankurou2"/>
+		<vocation name="Kankurou3"/>
+		<vocation name="Kankurou4"/>
+		<vocation name="Kankurou5"/>
+		<vocation name="Kankurou6"/>
+	</instant>
+	<!-- kankurou special -->
+	<!-- temari -->
+	<instant name="Kamaitachi no Jutsu" words="kamaitachi no jutsu" lvl="10" mana="40" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="temari/kamaitachi no jutsu.lua">
+		<vocation name="Temari"/>
+		<vocation name="Temari2"/>
+		<vocation name="Temari3"/>
+		<vocation name="Temari4"/>
+		<vocation name="Temari5"/>
+		<vocation name="Temari6"/>
+	</instant>
+	<instant name="Daikamaitachi no Jutsu" words="daikamaitachi no jutsu" lvl="20" mana="80" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="temari/daikamaitachi no jutsu.lua">
+		<vocation name="Temari"/>
+		<vocation name="Temari2"/>
+		<vocation name="Temari3"/>
+		<vocation name="Temari4"/>
+		<vocation name="Temari5"/>
+		<vocation name="Temari6"/>
+	</instant>
+	<instant name="Tatsu no Oshigoto" words="tatsu no oshigoto" lvl="40" mana="150" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="temari/tatsu no oshigoto.lua">
+		<vocation name="Temari"/>
+		<vocation name="Temari2"/>
+		<vocation name="Temari3"/>
+		<vocation name="Temari4"/>
+		<vocation name="Temari5"/>
+		<vocation name="Temari6"/>
+	</instant>
+	<instant name="Kazekiri no Jutsu" words="kazekiri no jutsu" lvl="70" mana="250" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="temari/kazekiri no jutsu.lua">
+		<vocation name="Temari"/>
+		<vocation name="Temari2"/>
+		<vocation name="Temari3"/>
+		<vocation name="Temari4"/>
+		<vocation name="Temari5"/>
+		<vocation name="Temari6"/>
+	</instant>
+	<instant name="Fuuton Kakeami" words="fuuton kakeami" lvl="100" mana="350" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="temari/fuuton kakeami.lua">
+		<vocation name="Temari"/>
+		<vocation name="Temari2"/>
+		<vocation name="Temari3"/>
+		<vocation name="Temari4"/>
+		<vocation name="Temari5"/>
+		<vocation name="Temari6"/>
+	</instant>
+	<instant name="Fuuton Kiryuu Ranbu" words="fuuton kiryuu ranbu" lvl="100" mana="400" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="temari/fuuton kiryuu ranbu.lua">
+		<vocation name="Temari"/>
+		<vocation name="Temari2"/>
+		<vocation name="Temari3"/>
+		<vocation name="Temari4"/>
+		<vocation name="Temari5"/>
+		<vocation name="Temari6"/>
+	</instant>
+	<instant name="Okakeami" words="okakeami" lvl="200" mana="600" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="temari/okakeami.lua">
+		<vocation name="Temari"/>
+		<vocation name="Temari2"/>
+		<vocation name="Temari3"/>
+		<vocation name="Temari4"/>
+		<vocation name="Temari5"/>
+		<vocation name="Temari6"/>
+	</instant>
+	<instant name="Okamaitachi" words="okamaitachi" lvl="200" mana="700" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="temari/okamaitachi.lua">
+		<vocation name="Temari"/>
+		<vocation name="Temari2"/>
+		<vocation name="Temari3"/>
+		<vocation name="Temari4"/>
+		<vocation name="Temari5"/>
+		<vocation name="Temari6"/>
+	</instant>
+	<!-- temari special -->
+	<!-- lee -->
+	<instant name="Konoha Senpuu" words="konoha senpuu" lvl="10" mana="40" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="lee/konoha senpuu.lua">
+		<vocation name="Lee"/>
+		<vocation name="Lee2"/>
+		<vocation name="Lee3"/>
+		<vocation name="Lee4"/>
+		<vocation name="Lee5"/>
+		<vocation name="Lee6"/>
+	</instant>
+	<instant name="Konoha Renpuu" words="konoha renpuu" lvl="20" mana="80" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="lee/konoha renpuu.lua">
+		<vocation name="Lee"/>
+		<vocation name="Lee2"/>
+		<vocation name="Lee3"/>
+		<vocation name="Lee4"/>
+		<vocation name="Lee5"/>
+		<vocation name="Lee6"/>
+	</instant>
+	<instant name="Konoha Daisenpuu" words="konoha daisenpuu" lvl="40" mana="150" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="lee/konoha daisenpuu.lua">
+		<vocation name="Lee"/>
+		<vocation name="Lee2"/>
+		<vocation name="Lee3"/>
+		<vocation name="Lee4"/>
+		<vocation name="Lee5"/>
+		<vocation name="Lee6"/>
+	</instant>
+	<instant name="Konoha Gouriki Senpuu" words="konoha gouriki senpuu" lvl="70" mana="250" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="lee/konoha gouriki senpuu.lua">
+		<vocation name="Lee"/>
+		<vocation name="Lee2"/>
+		<vocation name="Lee3"/>
+		<vocation name="Lee4"/>
+		<vocation name="Lee5"/>
+		<vocation name="Lee6"/>
+	</instant>
+	<instant name="Seishun Furu Pawa" words="seishun furu pawa" lvl="100" mana="350" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="lee/seishun furu pawa.lua">
+		<vocation name="Lee"/>
+		<vocation name="Lee2"/>
+		<vocation name="Lee3"/>
+		<vocation name="Lee4"/>
+		<vocation name="Lee5"/>
+		<vocation name="Lee6"/>
+	</instant>
+	<instant name="Omote Renge" words="omote renge" lvl="100" mana="400" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="lee/omote renge.lua">
+		<vocation name="Lee"/>
+		<vocation name="Lee2"/>
+		<vocation name="Lee3"/>
+		<vocation name="Lee4"/>
+		<vocation name="Lee5"/>
+		<vocation name="Lee6"/>
+	</instant>
+	<instant name="Asa Kujaku" words="asa kujaku" lvl="200" mana="600" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="lee/asa kujaku.lua">
+		<vocation name="Lee"/>
+		<vocation name="Lee2"/>
+		<vocation name="Lee3"/>
+		<vocation name="Lee4"/>
+		<vocation name="Lee5"/>
+		<vocation name="Lee6"/>
+	</instant>
+	<instant name="Ura Renge" words="Ura Renge" lvl="200" mana="700" prem="0" range="4" blockwalls="1" exhaustion="2000" needlearn="0" script="lee/ura renge.lua">
+		<vocation name="Lee"/>
+		<vocation name="Lee2"/>
+		<vocation name="Lee3"/>
+		<vocation name="Lee4"/>
+		<vocation name="Lee5"/>
+		<vocation name="Lee6"/>
+	</instant>
+	<!-- lee special -->
+	<!-- neji -->
+	<instant name="Juuken" words="juuken" lvl="10" mana="40" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="neji/juuken.lua">
+		<vocation name="Neji"/>
+		<vocation name="Neji2"/>
+		<vocation name="Neji3"/>
+		<vocation name="Neji4"/>
+		<vocation name="Neji5"/>
+		<vocation name="Neji6"/>
+		<vocation name="Hinata"/>
+		<vocation name="Hinata2"/>
+		<vocation name="Hinata3"/>
+		<vocation name="Hinata4"/>
+		<vocation name="Hinata5"/>
+		<vocation name="Hinata6"/>
+	</instant>
+	<instant name="Hakkeshou Kaiten" words="hakkeshou kaiten" lvl="20" mana="80" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="neji/hakkeshou kaiten.lua">
+		<vocation name="Neji"/>
+		<vocation name="Neji2"/>
+		<vocation name="Neji3"/>
+		<vocation name="Neji4"/>
+		<vocation name="Neji5"/>
+		<vocation name="Neji6"/>
+	</instant>
+	<instant name="Daijuuken" words="daijuuken" lvl="40" mana="150" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="neji/daijuuken.lua">
+		<vocation name="Neji"/>
+		<vocation name="Neji2"/>
+		<vocation name="Neji3"/>
+		<vocation name="Neji4"/>
+		<vocation name="Neji5"/>
+		<vocation name="Neji6"/>
+	</instant>
+	<instant name="Hakke Rokujuuyonshou" words="hakke rokujuuyonshou" lvl="70" mana="250" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="neji/hakke rokujuuyonshou.lua">
+		<vocation name="Neji"/>
+		<vocation name="Hinata"/>
+		<vocation name="Hinata2"/>
+		<vocation name="Hinata3"/>
+		<vocation name="Hinata4"/>
+		<vocation name="Hinata5"/>
+		<vocation name="Hinata6"/>
+	</instant>
+	<instant name="Hakke Kuuhekishou" words="hakke kuuhekishou" lvl="100" mana="350" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="neji/hakke kuuhekishou.lua">
+		<vocation name="Neji"/>
+		<vocation name="Neji2"/>
+		<vocation name="Neji3"/>
+		<vocation name="Neji4"/>
+		<vocation name="Neji5"/>
+		<vocation name="Neji6"/>
+	</instant>
+	<instant name="Hakke Hyakunijuuhachishou" words="hakke hyakunijuuhachishou" lvl="100" mana="400" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="neji/hakke hyakunijuuhachishou.lua">
+		<vocation name="Neji"/>
+		<vocation name="Neji2"/>
+		<vocation name="Neji3"/>
+		<vocation name="Neji4"/>
+		<vocation name="Neji5"/>
+		<vocation name="Neji6"/>
+	</instant>
+	<instant name="Hakke Hasangeki" words="hakke hasangeki" lvl="200" mana="600" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="neji/hakke hasangeki.lua">
+		<vocation name="Neji"/>
+		<vocation name="Neji2"/>
+		<vocation name="Neji3"/>
+		<vocation name="Neji4"/>
+		<vocation name="Neji5"/>
+		<vocation name="Neji6"/>
+	</instant>
+	<instant name="Kaiten" words="kaiten" lvl="200" mana="700" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="neji/kaiten.lua">
+		<vocation name="Neji"/>
+		<vocation name="Neji2"/>
+		<vocation name="Neji3"/>
+		<vocation name="Neji4"/>
+		<vocation name="Neji5"/>
+		<vocation name="Neji6"/>
+	</instant>
+	<!-- neji special -->
+	<instant name="Daikaiten" words="daikaiten" special="1" lvl="1000" mana="10000" selftarget="1" exhaustion="2000" needlearn="0" script="neji/daikaiten.lua">
+		<vocation name="Neji"/>
+		<vocation name="Neji2"/>
+		<vocation name="Neji3"/>
+		<vocation name="Neji4"/>
+		<vocation name="Neji5"/>
+		<vocation name="Neji6"/>
+	</instant>
+	<!-- tenten -->
+	<instant name="Senbon Kai" words="senbon kai" lvl="20" mana="80" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="tenten/senbon kai.lua">
+		<vocation name="Tenten"/>
+		<vocation name="Tenten2"/>
+		<vocation name="Tenten3"/>
+		<vocation name="Tenten4"/>
+		<vocation name="Tenten5"/>
+		<vocation name="Tenten6"/>
+	</instant>
+	<instant name="Fuma Shuriken no Jutsu" words="fuma shuriken no jutsu" lvl="40" mana="150" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="tenten/fuma shuriken no jutsu.lua">
+		<vocation name="Tenten"/>
+		<vocation name="Tenten2"/>
+		<vocation name="Tenten3"/>
+		<vocation name="Tenten4"/>
+		<vocation name="Tenten5"/>
+		<vocation name="Tenten6"/>
+	</instant>
+	<instant name="Kibaku Fuda no Jutsu" words="kibaku fuda no jutsu" lvl="70" mana="250" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="tenten/kibaku fuda no jutsu.lua">
+		<vocation name="Tenten"/>
+		<vocation name="Tenten2"/>
+		<vocation name="Tenten3"/>
+		<vocation name="Tenten4"/>
+		<vocation name="Tenten5"/>
+		<vocation name="Tenten6"/>
+		<vocation name="Shikamaru"/>
+		<vocation name="Shikamaru2"/>
+		<vocation name="Shikamaru3"/>
+		<vocation name="Shikamaru4"/>
+		<vocation name="Shikamaru5"/>
+		<vocation name="Shikamaru6"/>
+		<vocation name="Ino"/>
+		<vocation name="Ino2"/>
+		<vocation name="Ino3"/>
+		<vocation name="Ino4"/>
+		<vocation name="Ino5"/>
+		<vocation name="Ino6"/>
+	</instant>
+	<instant name="Bakuryuugeki" words="bakuryuugeki" lvl="100" mana="350" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="tenten/bakuryuugeki.lua">
+		<vocation name="Tenten"/>
+		<vocation name="Tenten2"/>
+		<vocation name="Tenten3"/>
+		<vocation name="Tenten4"/>
+		<vocation name="Tenten5"/>
+		<vocation name="Tenten6"/>
+	</instant>
+	<instant name="Soushouryuu" words="soushouryuu" lvl="100" mana="400" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="tenten/soushouryuu.lua">
+		<vocation name="Tenten"/>
+		<vocation name="Tenten2"/>
+		<vocation name="Tenten3"/>
+		<vocation name="Tenten4"/>
+		<vocation name="Tenten5"/>
+		<vocation name="Tenten6"/>
+	</instant>
+	<instant name="Hi no Maki" words="hi no maki" lvl="200" mana="600" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="tenten/hi no maki.lua">
+		<vocation name="Tenten"/>
+		<vocation name="Tenten2"/>
+		<vocation name="Tenten3"/>
+		<vocation name="Tenten4"/>
+		<vocation name="Tenten5"/>
+		<vocation name="Tenten6"/>
+	</instant>
+	<instant name="Tensasai" words="tensasai" lvl="200" mana="700" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="tenten/tensasai.lua">
+		<vocation name="Tenten"/>
+		<vocation name="Tenten2"/>
+		<vocation name="Tenten3"/>
+		<vocation name="Tenten4"/>
+		<vocation name="Tenten5"/>
+		<vocation name="Tenten6"/>
+	</instant>
+	<!-- tenten special -->
+	<!-- shikamaru -->
+	<instant name="Kage Kubishibari no Jutsu" words="kage kubishibari no jutsu" lvl="20" mana="80" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="shikamaru/kage kubishibari no jutsu.lua">
+		<vocation name="Shikamaru"/>
+		<vocation name="Shikamaru2"/>
+		<vocation name="Shikamaru3"/>
+		<vocation name="Shikamaru4"/>
+		<vocation name="Shikamaru5"/>
+		<vocation name="Shikamaru6"/>
+	</instant>
+	<instant name="Kagemane Shuriken no Jutsu" words="kagemane shuriken no jutsu" lvl="40" mana="150" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="shikamaru/kagemane shuriken no jutsu.lua">
+		<vocation name="Shikamaru"/>
+		<vocation name="Shikamaru2"/>
+		<vocation name="Shikamaru3"/>
+		<vocation name="Shikamaru4"/>
+		<vocation name="Shikamaru5"/>
+		<vocation name="Shikamaru6"/>
+	</instant>
+	<instant name="Kage Hando no Jutsu" words="kage hando no jutsu" lvl="100" mana="350" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="shikamaru/kage hando no jutsu.lua">
+		<vocation name="Shikamaru"/>
+		<vocation name="Shikamaru2"/>
+		<vocation name="Shikamaru3"/>
+		<vocation name="Shikamaru4"/>
+		<vocation name="Shikamaru5"/>
+		<vocation name="Shikamaru6"/>
+	</instant>
+	<instant name="Kageyose no Jutsu" words="kageyose no jutsu" lvl="100" mana="400" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="shikamaru/kageyose no jutsu.lua">
+		<vocation name="Shikamaru"/>
+		<vocation name="Shikamaru2"/>
+		<vocation name="Shikamaru3"/>
+		<vocation name="Shikamaru4"/>
+		<vocation name="Shikamaru5"/>
+		<vocation name="Shikamaru6"/>
+	</instant>
+	<instant name="Kage Nui no Jutsu" words="kage nui no jutsu" lvl="200" mana="600" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="shikamaru/kage nui no jutsu.lua">
+		<vocation name="Shikamaru"/>
+		<vocation name="Shikamaru2"/>
+		<vocation name="Shikamaru3"/>
+		<vocation name="Shikamaru4"/>
+		<vocation name="Shikamaru5"/>
+		<vocation name="Shikamaru6"/>
+	</instant>
+	<instant name="Kagezukami no Jutsu" words="kagezukami no jutsu" lvl="200" mana="700" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="shikamaru/kagezukami no jutsu.lua">
+		<vocation name="Shikamaru"/>
+		<vocation name="Shikamaru2"/>
+		<vocation name="Shikamaru3"/>
+		<vocation name="Shikamaru4"/>
+		<vocation name="Shikamaru5"/>
+		<vocation name="Shikamaru6"/>
+	</instant>
+	<!-- shikamaru special -->
+	<!-- chouji -->
+	<instant name="Nikudan Sensha" words="nikudan sensha" lvl="10" mana="40" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="chouji/nikudan sensha.lua">
+		<vocation name="Chouji"/>
+		<vocation name="Chouji2"/>
+		<vocation name="Chouji3"/>
+		<vocation name="Chouji4"/>
+		<vocation name="Chouji5"/>
+		<vocation name="Chouji6"/>
+	</instant>
+	<instant name="Baika no Jutsu" words="baika no jutsu" lvl="20" mana="80" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="chouji/baika no jutsu.lua">
+		<vocation name="Chouji"/>
+		<vocation name="Chouji2"/>
+		<vocation name="Chouji3"/>
+		<vocation name="Chouji4"/>
+		<vocation name="Chouji5"/>
+		<vocation name="Chouji6"/>
+	</instant>
+	<instant name="Bubun Baika no Jutsu" words="bubun baika no jutsu" lvl="40" mana="150" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="chouji/bubun baika no jutsu.lua">
+		<vocation name="Chouji"/>
+		<vocation name="Chouji2"/>
+		<vocation name="Chouji3"/>
+		<vocation name="Chouji4"/>
+		<vocation name="Chouji5"/>
+		<vocation name="Chouji6"/>
+	</instant>
+	<instant name="Nikudan Hari Sensha" words="nikudan hari sensha" lvl="70" mana="250" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="chouji/nikudan hari sensha.lua">
+		<vocation name="Chouji"/>
+		<vocation name="Chouji2"/>
+		<vocation name="Chouji3"/>
+		<vocation name="Chouji4"/>
+		<vocation name="Chouji5"/>
+		<vocation name="Chouji6"/>
+	</instant>
+	<instant name="Choudan Bakugeki" words="choudan bakugeki" lvl="100" mana="350" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="chouji/choudan bakugeki.lua">
+		<vocation name="Chouji"/>
+		<vocation name="Chouji2"/>
+		<vocation name="Chouji3"/>
+		<vocation name="Chouji4"/>
+		<vocation name="Chouji5"/>
+		<vocation name="Chouji6"/>
+	</instant>
+	<instant name="Chouharite" words="chouharite" lvl="100" mana="400" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="chouji/chouharite.lua">
+		<vocation name="Chouji"/>
+		<vocation name="Chouji2"/>
+		<vocation name="Chouji3"/>
+		<vocation name="Chouji4"/>
+		<vocation name="Chouji5"/>
+		<vocation name="Chouji6"/>
+	</instant>
+	<instant name="Nikudan Yoyo" words="nikudan yoyo" lvl="200" mana="600" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="chouji/nikudan yoyo.lua">
+		<vocation name="Chouji"/>
+		<vocation name="Chouji2"/>
+		<vocation name="Chouji3"/>
+		<vocation name="Chouji4"/>
+		<vocation name="Chouji5"/>
+		<vocation name="Chouji6"/>
+	</instant>
+	<instant name="Chouharite Bakugeki" words="chouharite bakugeki" lvl="200" mana="700" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="chouji/chouharite bakugeki.lua">
+		<vocation name="Chouji"/>
+		<vocation name="Chouji2"/>
+		<vocation name="Chouji3"/>
+		<vocation name="Chouji4"/>
+		<vocation name="Chouji5"/>
+		<vocation name="Chouji6"/>
+	</instant>
+	<!-- chouji special -->
+	<!-- ino -->
+	<instant name="Chakra no Kai" words="chakra no kai" lvl="40" mana="150" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="ino/chakra no kai.lua">
+		<vocation name="Ino"/>
+		<vocation name="Ino2"/>
+		<vocation name="Ino3"/>
+		<vocation name="Ino4"/>
+		<vocation name="Ino5"/>
+		<vocation name="Ino6"/>
+	</instant>
+	<instant name="Kanchi no Jutsu" words="kanchi no jutsu" lvl="100" mana="400" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="ino/kanchi no jutsu.lua">
+		<vocation name="Ino"/>
+		<vocation name="Ino2"/>
+		<vocation name="Ino3"/>
+		<vocation name="Ino4"/>
+		<vocation name="Ino5"/>
+		<vocation name="Ino6"/>
+	</instant>
+	<instant name="Shintenshin no Jutsu" words="shintenshin no jutsu" lvl="200" mana="600" prem="0" range="5" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="ino/shintenshin no jutsu.lua">
+		<vocation name="Ino"/>
+		<vocation name="Ino2"/>
+		<vocation name="Ino3"/>
+		<vocation name="Ino4"/>
+		<vocation name="Ino5"/>
+		<vocation name="Ino6"/>
+	</instant>
+	<instant name="Daikanchi no Jutsu" words="daikanchi no jutsu" lvl="200" mana="700" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="ino/daikanchi no jutsu.lua">
+		<vocation name="Ino"/>
+		<vocation name="Ino2"/>
+		<vocation name="Ino3"/>
+		<vocation name="Ino4"/>
+		<vocation name="Ino5"/>
+		<vocation name="Ino6"/>
+	</instant>
+	<!-- ino special -->
+	<!-- kiba -->
+	<instant name="Hikkaki Tsume" words="hikkaki tsume" lvl="10" mana="40" prem="0" range="2" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="kiba/hikkaki tsume.lua">
+		<vocation name="Kiba"/>
+		<vocation name="Kiba2"/>
+		<vocation name="Kiba3"/>
+		<vocation name="Kiba4"/>
+		<vocation name="Kiba5"/>
+		<vocation name="Kiba6"/>
+	</instant>
+	<instant name="Tsuuga" words="tsuuga" lvl="20" mana="80" prem="0" direction="1" blockwalls="1" exhaustion="2000" needlearn="0" script="kiba/tsuuga.lua">
+		<vocation name="Kiba"/>
+		<vocation name="Kiba2"/>
+		<vocation name="Kiba3"/>
+		<vocation name="Kiba4"/>
+		<vocation name="Kiba5"/>
+		<vocation name="Kiba6"/>
+	</instant>
+	<instant name="Gatsuuga" words="gatsuuga" lvl="40" mana="150" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="kiba/gatsuuga.lua">
+		<vocation name="Kiba"/>
+		<vocation name="Kiba2"/>
+		<vocation name="Kiba3"/>
+		<vocation name="Kiba4"/>
+		<vocation name="Kiba5"/>
+		<vocation name="Kiba6"/>
+	</instant>
+	<instant name="Garouga" words="garouga" lvl="70" mana="250" prem="0" direction="1" blockwalls="1" exhaustion="2000" needlearn="0" script="kiba/garouga.lua">
+		<vocation name="Kiba"/>
+		<vocation name="Kiba2"/>
+		<vocation name="Kiba3"/>
+		<vocation name="Kiba4"/>
+		<vocation name="Kiba5"/>
+		<vocation name="Kiba6"/>
+	</instant>
+	<instant name="Ooiga Gatenga" words="ooiga gatenga" lvl="100" mana="350" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="kiba/ooiga gatenga.lua">
+		<vocation name="Kiba"/>
+		<vocation name="Kiba2"/>
+		<vocation name="Kiba3"/>
+		<vocation name="Kiba4"/>
+		<vocation name="Kiba5"/>
+		<vocation name="Kiba6"/>
+	</instant>
+	<instant name="Gatenga" words="gatenga" lvl="100" mana="400" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="kiba/gatenga.lua">
+		<vocation name="Kiba"/>
+		<vocation name="Kiba2"/>
+		<vocation name="Kiba3"/>
+		<vocation name="Kiba4"/>
+		<vocation name="Kiba5"/>
+		<vocation name="Kiba6"/>
+	</instant>
+	<instant name="Junji Konbi Garouga" words="junji konbi garouga" lvl="200" mana="600" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="kiba/junji konbi garouga.lua">
+		<vocation name="Kiba"/>
+		<vocation name="Kiba2"/>
+		<vocation name="Kiba3"/>
+		<vocation name="Kiba4"/>
+		<vocation name="Kiba5"/>
+		<vocation name="Kiba6"/>
+	</instant>
+	<instant name="GJunji Konbi Gatsuuga" words="junji konbi gatsuuga" lvl="200" mana="700" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="kiba/junji konbi gatsuuga.lua">
+		<vocation name="Kiba"/>
+		<vocation name="Kiba2"/>
+		<vocation name="Kiba3"/>
+		<vocation name="Kiba4"/>
+		<vocation name="Kiba5"/>
+		<vocation name="Kiba6"/>
+	</instant>
+	<!-- kiba special -->
+	<!-- shino -->
+	<instant name="Mushi no Jutsu" words="mushi no jutsu" lvl="10" mana="40" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="shino/mushi no jutsu.lua">
+		<vocation name="Shino"/>
+		<vocation name="Shino2"/>
+		<vocation name="Shino3"/>
+		<vocation name="Shino4"/>
+		<vocation name="Shino5"/>
+		<vocation name="Shino6"/>
+	</instant>
+	<instant name="Kikaichu no Jutsu" words="kikaichu no jutsu" lvl="20" mana="80" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="shino/kikaichu no jutsu.lua">
+		<vocation name="Shino"/>
+		<vocation name="Shino2"/>
+		<vocation name="Shino3"/>
+		<vocation name="Shino4"/>
+		<vocation name="Shino5"/>
+		<vocation name="Shino6"/>
+	</instant>
+	<instant name="Mushi Bakuhatsu" words="mushi bakuhatsu" lvl="40" mana="150" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="shino/mushi bakuhatsu.lua">
+		<vocation name="Shino"/>
+		<vocation name="Shino2"/>
+		<vocation name="Shino3"/>
+		<vocation name="Shino4"/>
+		<vocation name="Shino5"/>
+		<vocation name="Shino6"/>
+	</instant>
+	<instant name="Kikaichu Kai" words="kikaichu kai" lvl="70" mana="250" prem="0" direction="1" blockwalls="1" exhaustion="2000" needlearn="0" script="shino/kikaichu kai.lua">
+		<vocation name="Shino"/>
+		<vocation name="Shino2"/>
+		<vocation name="Shino3"/>
+		<vocation name="Shino4"/>
+		<vocation name="Shino5"/>
+		<vocation name="Shino6"/>
+	</instant>
+	<instant name="Bousui no Jin" words="bousui no jin" lvl="100" mana="350" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="shino/bousui no jin.lua">
+		<vocation name="Shino"/>
+		<vocation name="Shino2"/>
+		<vocation name="Shino3"/>
+		<vocation name="Shino4"/>
+		<vocation name="Shino5"/>
+		<vocation name="Shino6"/>
+	</instant>
+	<instant name="Mushi Bakugeki" words="mushi bakugeki" lvl="100" mana="400" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="shino/mushi bakugeki.lua">
+		<vocation name="Shino"/>
+		<vocation name="Shino2"/>
+		<vocation name="Shino3"/>
+		<vocation name="Shino4"/>
+		<vocation name="Shino5"/>
+		<vocation name="Shino6"/>
+	</instant>
+	<instant name="Mushigeki" words="mushigeki" lvl="200" mana="600" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="shino/mushigeki.lua">
+		<vocation name="Shino"/>
+		<vocation name="Shino2"/>
+		<vocation name="Shino3"/>
+		<vocation name="Shino4"/>
+		<vocation name="Shino5"/>
+		<vocation name="Shino6"/>
+	</instant>
+	<instant name="Mushi Jamingu no Jutsu" words="mushi jamingu no jutsu" lvl="200" mana="700" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="shino/mushi jamingu no jutsu.lua">
+		<vocation name="Shino"/>
+		<vocation name="Shino2"/>
+		<vocation name="Shino3"/>
+		<vocation name="Shino4"/>
+		<vocation name="Shino5"/>
+		<vocation name="Shino6"/>
+	</instant>
+	<!-- shino special -->
+	<!-- hinata -->
+	<instant name="Hakke Sanjuunishou" words="hakke sanjuunishou" lvl="20" mana="80" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="hinata/hakke sanjuunishou.lua">
+		<vocation name="Hinata"/>
+		<vocation name="Hinata2"/>
+		<vocation name="Hinata3"/>
+		<vocation name="Hinata4"/>
+		<vocation name="Hinata5"/>
+		<vocation name="Hinata6"/>
+	</instant>
+	<instant name="Shoutei" words="shoutei" lvl="40" mana="150" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="hinata/shoutei.lua">
+		<vocation name="Hinata"/>
+		<vocation name="Hinata2"/>
+		<vocation name="Hinata3"/>
+		<vocation name="Hinata4"/>
+		<vocation name="Hinata5"/>
+		<vocation name="Hinata6"/>
+	</instant>
+	<instant name="Mizu Hari" words="mizu hari" lvl="100" mana="350" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="hinata/mizu hari.lua">
+		<vocation name="Hinata"/>
+		<vocation name="Hinata2"/>
+		<vocation name="Hinata3"/>
+		<vocation name="Hinata4"/>
+		<vocation name="Hinata5"/>
+		<vocation name="Hinata6"/>
+	</instant>
+	<instant name="Shugohakke" words="shugohakke" lvl="100" mana="400" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="hinata/shugohakke.lua">
+		<vocation name="Hinata"/>
+		<vocation name="Hinata2"/>
+		<vocation name="Hinata3"/>
+		<vocation name="Hinata4"/>
+		<vocation name="Hinata5"/>
+		<vocation name="Hinata6"/>
+	</instant>
+	<instant name="Juho Soshiken" words="juho soshiken" lvl="200" mana="600" prem="0" range="4" needtarget="1" blockwalls="1" exhaustion="2000" needlearn="0" script="hinata/juho soshiken.lua">
+		<vocation name="Hinata"/>
+		<vocation name="Hinata2"/>
+		<vocation name="Hinata3"/>
+		<vocation name="Hinata4"/>
+		<vocation name="Hinata5"/>
+		<vocation name="Hinata6"/>
+	</instant>
+	<instant name="Hakke Soujishi Hougeki" words="hakke soujishi hougeki" lvl="200" mana="700" prem="0" blockwalls="1" exhaustion="2000" needlearn="0" script="hinata/hakke soujishi hougeki.lua">
+		<vocation name="Hinata"/>
+		<vocation name="Hinata2"/>
+		<vocation name="Hinata3"/>
+		<vocation name="Hinata4"/>
+		<vocation name="Hinata5"/>
+		<vocation name="Hinata6"/>
+	</instant>
+	<!-- hinata special -->
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- monsters spells -->
+	<instant name="Red Beam Shot" words="red beam shot" lvl="1" mana="1" prem="0" range="3" blockwalls="1" needtarget="1" exhaustion="2000" needlearn="1" script="monster/red beam shot.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Red Beam Wave" words="red beam wave" lvl="1" mana="1" prem="0" direction="1" blockwalls="1" exhaustion="2000" needlearn="1" script="monster/red beam wave.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Poison Shot" words="poison shot" lvl="1" mana="1" prem="0" range="3" blockwalls="1" needtarget="1" exhaustion="2000" needlearn="1" script="monster/poison shot.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Fire Shot" words="fire shot" lvl="1" mana="1" prem="0" range="3" blockwalls="1" needtarget="1" exhaustion="2000" needlearn="1" script="monster/fire shot.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Wind Shot" words="wind shot" lvl="1" mana="1" prem="0" range="3" blockwalls="1" needtarget="1" exhaustion="2000" needlearn="1" script="monster/wind shot.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Earth Shot" words="earth shot" lvl="1" mana="1" prem="0" range="3" blockwalls="1" needtarget="1" exhaustion="2000" needlearn="1" script="monster/earth shot.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Lightning Shot" words="lightning shot" lvl="1" mana="1" prem="0" range="3" blockwalls="1" needtarget="1" exhaustion="2000" needlearn="1" script="monster/lightning shot.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Water Shot" words="water shot" lvl="1" mana="1" prem="0" range="3" blockwalls="1" needtarget="1" exhaustion="2000" needlearn="1" script="monster/water shot.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Throw Stone" words="throw stone" lvl="1" mana="1" prem="0" range="3" blockwalls="1" needtarget="1" exhaustion="2000" needlearn="1" script="monster/throw stone.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Throw Big Stone" words="throw big stone" lvl="1" mana="1" prem="0" range="3" blockwalls="1" needtarget="1" exhaustion="2000" needlearn="1" script="monster/throw big stone.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Throw Shuriken" words="throw shuriken" lvl="1" mana="1" prem="0" range="3" blockwalls="1" needtarget="1" exhaustion="2000" needlearn="1" script="monster/throw shuriken.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Throw Big Shuriken" words="throw big shuriken" lvl="1" mana="1" prem="0" range="3" blockwalls="1" needtarget="1" exhaustion="2000" needlearn="1" script="monster/throw big shuriken.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Throw Sand Shuriken" words="throw sand shuriken" lvl="1" mana="1" prem="0" range="3" blockwalls="1" needtarget="1" exhaustion="2000" needlearn="1" script="monster/throw sand shuriken.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Throw Kunai" words="throw kunai" lvl="1" mana="1" prem="0" range="3" blockwalls="1" needtarget="1" exhaustion="2000" needlearn="1" script="monster/throw kunai.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Throw Senbon" words="throw senbon" lvl="1" mana="1" prem="0" range="3" blockwalls="1" needtarget="1" exhaustion="2000" needlearn="1" script="monster/throw senbon.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Stomp" words="stomp" lvl="1" mana="1" prem="0" blockwalls="1" exhaustion="2000" needlearn="1" script="monster/stomp.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Sound Explosion" words="sound explosion" lvl="1" mana="1" prem="0" blockwalls="1" exhaustion="2000" needlearn="1" script="monster/sound explosion.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Blood Sucker" words="blood sucker" lvl="1" mana="1" prem="0" range="3" blockwalls="1" needtarget="1" exhaustion="2000" needlearn="1" script="monster/blood sucker.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Stomp Wave" words="stomp wave" lvl="1" mana="1" prem="0" blockwalls="1" direction="1" exhaustion="2000" needlearn="1" script="monster/stomp wave.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Fire Aoe" words="fire aoe" lvl="1" mana="1" prem="0" blockwalls="1" exhaustion="2000" needlearn="1" script="monster/fire aoe.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Water Aoe" words="water aoe" lvl="1" mana="1" prem="0" blockwalls="1" exhaustion="2000" needlearn="1" script="monster/water aoe.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Wind Aoe" words="wind aoe" lvl="1" mana="1" prem="0" blockwalls="1" exhaustion="2000" needlearn="1" script="monster/wind aoe.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Lightning Aoe" words="lightning aoe" lvl="1" mana="1" prem="0" blockwalls="1" exhaustion="2000" needlearn="1" script="monster/lightning aoe.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Lightning Exori" words="lightning exori" lvl="1" mana="1" prem="0" blockwalls="1" exhaustion="2000" needlearn="1" script="monster/lightning exori.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Earth Aoe" words="earth aoe" lvl="1" mana="1" prem="0" blockwalls="1" exhaustion="2000" needlearn="1" script="monster/earth aoe.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Poison Explosion" words="poison explosion" lvl="1" mana="1" prem="0" blockwalls="1" exhaustion="2000" needlearn="1" script="monster/poison explosion.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Fire Wave" words="fire wave" lvl="1" mana="1" prem="0" blockwalls="1" direction="1" exhaustion="2000" needlearn="1" script="monster/fire wave.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Water Wave" words="water wave" lvl="1" mana="1" prem="0" blockwalls="1" direction="1" exhaustion="2000" needlearn="1" script="monster/water wave.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Wind Wave" words="wind wave" lvl="1" mana="1" prem="0" blockwalls="1" direction="1" exhaustion="2000" needlearn="1" script="monster/wind wave.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Earth Wave" words="earth wave" lvl="1" mana="1" prem="0" blockwalls="1" direction="1" exhaustion="2000" needlearn="1" script="monster/earth wave.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Lightning Wave" words="lightning wave" lvl="1" mana="1" prem="0" blockwalls="1" direction="1" exhaustion="2000" needlearn="1" script="monster/lightning wave.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Blue Wave" words="blue wave" lvl="1" mana="1" prem="0" blockwalls="1" direction="1" exhaustion="2000" needlearn="1" script="monster/blue wave.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Blue Aoe" words="blue aoe" lvl="1" mana="1" prem="0" blockwalls="1" exhaustion="2000" needlearn="1" script="monster/blue aoe.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Red Aoe" words="red aoe" lvl="1" mana="1" prem="0" blockwalls="1" exhaustion="2000" needlearn="1" script="monster/red aoe.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Slingshot Shot" words="slingshot shot" lvl="1" mana="1" prem="0" range="3" blockwalls="1" needtarget="1" exhaustion="2000" needlearn="1" script="monster/slingshot shot.lua">
+		<vocation name="None"/>
+	</instant>
+	<instant name="Akatsuki Aoe" words="akatsuki aoe" lvl="1" mana="1" prem="0" blockwalls="1" exhaustion="2000" needlearn="1" script="monster/akatsuki aoe.lua">
+		<vocation name="None"/>
+	</instant>
+	
+</spells>
