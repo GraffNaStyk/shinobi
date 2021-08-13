@@ -4,6 +4,7 @@ namespace App\Model;
 
 use App\Facades\Db\Model;
 use App\Helpers\Town;
+use App\Helpers\Vocation;
 
 class Player extends Model
 {
@@ -12,7 +13,7 @@ class Player extends Model
     public static function create(array $fields)
     {
     	$pos = Town::getTownPos($fields['town_id']);
-    	
+
 	    self::insert([
 		    'name'       => ucfirst($fields['name']),
 		    'vocation'   => $fields['vocation'],
@@ -20,6 +21,7 @@ class Player extends Model
 		    'posx'       => $pos['x'],
 		    'posy'       => $pos['y'],
 		    'posz'       => $pos['z'],
+ 		    'looktype'   => Vocation::getOutfit($fields['vocation']),
  		    'conditions' => 0,
 		    'account_id' => self::lastId() ?: $fields['account_id']
 	    ])->exec();
